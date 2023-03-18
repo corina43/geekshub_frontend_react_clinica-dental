@@ -10,7 +10,7 @@ import { AppointmentPage } from '../appointment/AppointmentPage'
 import { AppointmentsPage } from '../appointments/AppointmentsPage'
 import { HomePage } from '../home/HomePage'
 import { LoginPage } from '../login/LoginPage'
-import { NotFoundPage } from '../NotFoundPage'
+
 import { RegisterPage } from '../register/RegisterPage'
 
 export const BodyPages =() =>{
@@ -24,10 +24,10 @@ export const BodyPages =() =>{
       <Route  path ="/login" element={<LoginPage/>} />
       <Route  path ="/register" element={<RegisterPage/>} />
       <Route  path ="/account" element={<AccountPage/>} />
-      <Route  path ="/appointments" element={<AppointmentsPage/>} />
-      <Route  path ="/appointment/:appointmentId" element={<AppointmentPage/>} />
+      <Route  path ="/Treatments" element={<AppointmentsPage/>} />
+      <Route  path ="/appointment" element={<AppointmentPage/>} />
       <Route  path ="/admin/users" element={<UsersPage/>} />
-      <Route  path ="*" element={<NotFoundPage/>} />
+      {/* <Route  path ="*" element={<NotFoundPage/>} /> */}
 
      
    </Routes>
