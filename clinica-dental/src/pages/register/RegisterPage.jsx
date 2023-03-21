@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { InputText } from "../../common/InputText/InputText";
 import { validate } from "../../common/helpers/useful";
 import { registerUser } from "../../services/apiCalls";
-
+import { ButtonSubmit } from "../../common/ButtonSubmit/ButtonSubmit";
 export const Register = () => {
   // 1 - Primero siempre se comprueba el valor de los hooks
   const [credenciales, setCredenciales] = useState({
@@ -10,7 +10,7 @@ export const Register = () => {
       value: "",
       validated: false,
     },
-    surname: {
+    user_name: {
       value: "",
       validated: false,
     },
@@ -23,7 +23,7 @@ export const Register = () => {
   //Este hook consistirá en el lugar de guardado de mensajes de error, a priori estarán en comillas vacías
   const [credencialesError, setCredencialesError] = useState({
     nameError: "",
-    surnameError: "",
+    usernameError: "",
     emailError: "",
   });
 
@@ -123,7 +123,7 @@ return (
       // Cada input escoge su diseño en base a si hay un error o no en el hook de errores
 
       className={
-        credencialesError.surnameError === ""
+        credencialesError.usernameError === ""
           ? "inputBasicDesign"
           : "inputBasicDesign inputErrorDesign"
       }
@@ -134,7 +134,7 @@ return (
       changeFunction={(e) => inputHandler(e)}
       blurFunction={(e) => checkError(e)}
     />
-    <div>{credencialesError.surnameError}</div>
+    <div>{credencialesError.usernameError}</div>
     <InputText
       // Cada input escoge su diseño en base a si hay un error o no en el hook de errores
       className={
@@ -167,7 +167,8 @@ return (
           } 
       }
     >
-      Register me!
+      <button>Register me!</button>
+      
     </div>
   </div>
 );
