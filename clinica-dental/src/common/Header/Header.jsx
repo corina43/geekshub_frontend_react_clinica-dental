@@ -3,8 +3,8 @@ import {useNavigate} from "react-router-dom"
 import { useDispatch } from "react-redux";
 
  import { useJwt, decodeToken  } from "react-jwt";
- import { Link } from "react-router-dom";
-import { Container, Navbar, Nav} from "react-bootstrap";
+//  import { NavLink } from "react-router-dom";
+import { Container, Navbar, Nav, NavDropdown} from "react-bootstrap";
 import { login, logout, userData } from "../../containers/User/userSlice";
 import "./Header.css"
 export const Header = () => {
@@ -107,6 +107,11 @@ return (
         >
       Home
         </Nav>
+        {/* <NavDropdown className=""="Admin">
+						<NavDropdown.Item as={NavLink} to={routes.admin.users}>
+							Usuarios
+						</NavDropdown.Item>
+					</NavDropdown> */}
          <Nav
            onClick={() => navigate("/appointments")}
           className="fw-bold m-auto text-center linkDesign">

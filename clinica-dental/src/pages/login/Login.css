@@ -1,12 +1,50 @@
 .loginDesign {
-
-    height: 80vh;
-    width: 100vw;
-
-    background-color: lightgrey;
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #09acd5;
+   
+  }
+  
+  .logininput {
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-bottom: 2px solid #333;
+    font-size: 16px;
+    background-color: transparent;
+    outline: none;
+    color: #333;
+  }
+  
+  .logininput::placeholder {
+    color: #aaa;
+  }
+  
+  .inputFeoLogin:focus::placeholder {
+    color: #333;
+  }
+  
+  .loginDesign div {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .loginDesign div:hover {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+  }
