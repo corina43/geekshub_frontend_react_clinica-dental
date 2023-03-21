@@ -2,6 +2,6 @@ import React from 'react'
 
 export const AppointmentsPage = () => {
   return (
-    <div>AppointmentsPage</div>
+    <div><h1>hola</h1></div>
   )
 }

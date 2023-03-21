@@ -1,8 +1,10 @@
 
 import {  BodyPages } from "./pages/body/BodyPages";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navegacion } from "./common/Navegacion/Navegacion ";
-//import { Home } from "./pages/home/HomePage";
+import { Header } from "./common/Header/Header";
+
+
+
 
 
 
@@ -13,11 +15,13 @@ function App() {
 
   return (
     <div className="App">
-    
-    <Navegacion /> 
-      <BodyPages />
      
-      {/* <Home/> */}
+    <Header />
+  
+      <BodyPages />
+    
+     
+  
       
    
     </div>
