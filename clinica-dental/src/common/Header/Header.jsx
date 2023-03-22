@@ -56,6 +56,14 @@ export const Header = () => {
         >
       Appointments
         </Nav>
+
+        {/* <Nav
+           onClick={() => navigate("/Profile")}
+          className="fw-bold m-auto text-center linkDesign"
+        >
+       Profile
+        </Nav> */}
+
          <Nav
            onClick={() => navigate("/about")}
            className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"

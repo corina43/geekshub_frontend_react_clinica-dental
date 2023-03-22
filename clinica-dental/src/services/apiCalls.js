@@ -21,7 +21,19 @@ export const createUserProfile = async (body) => {
 
   return await axios.post(`${root}/auth/register`, body)
 };
-// export const registerUser = async (body) => {
-
-//     return await axios.post(`${root}/auth/register`, body);
-// } 
+ 
+export const gettUserProfile = async (body, token) => {
+  const config = {
+    headers: { Authorization: `Bearer ${token}` },
+  };
+  const bodyParameters = {
+    username: body.username,
+    password: body.password,
+  };
+  try {
+    let res = await axios.patch(`${URL}/users/edit`, bodyParameters, config);
+    return res.data.resp;
+  } catch (error) {
+    console.error(error);
+  }
+};
