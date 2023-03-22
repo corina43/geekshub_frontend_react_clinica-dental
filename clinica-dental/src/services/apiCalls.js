@@ -22,7 +22,8 @@ export const createUserProfile = async (body) => {
   return await axios.post(`${root}/auth/register`, body)
 };
  
-export const gettUserProfile = async (body, token) => {
+
+export const getUserProfile = async (body, token) => {
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
@@ -31,7 +32,7 @@ export const gettUserProfile = async (body, token) => {
     password: body.password,
   };
   try {
-    let res = await axios.patch(`${URL}/users/edit`, bodyParameters, config);
+    let res = await axios.patch(`${root}/users/edit`, bodyParameters, config);
     return res.data.resp;
   } catch (error) {
     console.error(error);

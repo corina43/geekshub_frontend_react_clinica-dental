@@ -4,12 +4,12 @@ import { useDispatch } from "react-redux";
 
  import { useJwt, decodeToken  } from "react-jwt";
 //  import { NavLink } from "react-router-dom";
-import { Container, Navbar, Nav, NavDropdown} from "react-bootstrap";
+import { Container, Navbar, Nav,Button} from "react-bootstrap";
 import { login, logout, userData } from "../../containers/User/userSlice";
 import "./Header.css"
 export const Header = () => {
    
-     const dispatch = useDispatch();
+    const dispatch = useDispatch ();
     const navigate = useNavigate ()
     const token = localStorage.getItem("jwt")
      let {decodeToken} = useJwt(token);
@@ -57,12 +57,12 @@ export const Header = () => {
       Appointments
         </Nav>
 
-        {/* <Nav
-           onClick={() => navigate("/Profile")}
+         <Nav
+           onClick={() => navigate("/profile")}
           className="fw-bold m-auto text-center linkDesign"
         >
        Profile
-        </Nav> */}
+        </Nav> 
 
          <Nav
            onClick={() => navigate("/about")}
@@ -72,7 +72,7 @@ export const Header = () => {
         </Nav>
 
        
-        <Nav
+        {/* <Nav
            onClick={() => navigate("/profile")}
            className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
         >
@@ -80,7 +80,7 @@ export const Header = () => {
           
             Hi, {decodeToken.name}!
           </div>
-        </Nav>
+        </Nav> */}
                  {isAdmin() ? (
            <Nav
              onClick={() => navigate("/admin")}
@@ -125,6 +125,14 @@ return (
           className="fw-bold m-auto text-center linkDesign">
       Appointments
         </Nav>
+        <Nav
+           onClick={() => navigate("/Profile")}
+          className="fw-bold m-auto text-center linkDesign"
+        >
+       Profile
+        </Nav> 
+
+
          <Nav
           onClick={() => navigate("/about")}
           className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"

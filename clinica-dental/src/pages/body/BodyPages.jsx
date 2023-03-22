@@ -10,7 +10,8 @@ import { AppointmentPage } from '../appointment/AppointmentPage'
 
 import { HomePage } from '../home/HomePage'
 import { Login } from '../login/LoginPage';
-import Profile from '../Profile/Profile';
+import { Profile } from '../Profile/Profile';
+
 import { Register } from '../register/RegisterPage';
 
 
