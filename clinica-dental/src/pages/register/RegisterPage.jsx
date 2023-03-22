@@ -174,168 +174,7 @@
 // );
 //     }
   
-// import React, { useState, useEffect } from "react";
-// import { InputText } from "../../common/InputText/InputText";
-// import { validate } from "../../common/helpers/useful";
-// import { registerUser } from "../../services/apiCalls";
-// import Button from 'react-bootstrap/Button';
-// import Form from 'react-bootstrap/Form';
-// import './Register.css';
 
-// export const Register = () => {
-//   const [credenciales, setCredenciales] = useState({
-//     name: {
-//       value: "",
-//       validated: false,
-//     },
-//     username: {
-//       value: "",
-//       validated: false,
-//     },
-//     email: {
-//       value: "",
-//       validated: false,
-//     },
-//     password: {
-//       value: "",
-//       validated: false,
-//     },
-//   });
-
-//   const [credencialesError, setCredencialesError] = useState({
-//     nameError: "",
-//     usernameError: "",
-//     emailError: "",
-//     passwordError: "",
-//   });
-
-//   const [registerAct, setRegisterAct] = useState(false);
-
-//   const inputHandler = (e) => {
-//     setCredenciales((prevState) => ({
-//       ...prevState,
-//       [e.target.name]: {
-//         value: e.target.value,
-//         validated: false,
-//       },
-//     }));
-//   };
-
-//   useEffect(() => {
-//     let allValidated = true;
-//     for (let field in credenciales) {
-//       if (!credenciales[field].validated) {
-//         allValidated = false;
-//         break;
-//       }
-//     }
-//     setRegisterAct(allValidated);
-//   }, [credenciales]);
-
-//   const checkError = (e) => {
-//     const validation = validate(
-//       e.target.name,
-//       e.target.value,
-//       e.target.required
-//     );
-//     setCredenciales((prevState) => ({
-//       ...prevState,
-//       [e.target.name]: {
-//         value: e.target.value,
-//         validated: validation.validated,
-//       },
-//     }));
-//     setCredencialesError((prevState) => ({
-//       ...prevState,
-//       [e.target.name + "Error"]: validation.message,
-//     }));
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     const { name, username, email, password } = credenciales;
-//     registerUser({ name: name.value, username: username.value, email: email.value, password: password.value })
-//       .then(response => {
-//         console.log(response);
-//         alert("Usuario registrado exitosamente.");
-//       })
-//       .catch(error => {
-//         console.error(error);
-//         alert("Hubo un error al registrar el usuario.");
-//       });
-//   };
-
-//   return (
-//     <div className="homeDesign">
-//       <Form onSubmit={handleSubmit}>
-//         <Form.Group controlId="formName">
-//           <Form.Label>Nombre:</Form.Label>
-//           <Form.Control
-//             type="text"
-//             name="name"
-//             placeholder="Nombre..."
-//             required={true}
-//             onChange={(e) => inputHandler(e)}
-//             onBlur={(e) => checkError(e)}
-//             className={
-//               credencialesError.nameError === ""
-//                 ? "inputBasicDesign"
-//                 : "inputBasicDesign inputErrorDesign"
-//             }
-//           />
-//           <Form.Text className="text-muted">
-//             {credencialesError.nameError}
-//           </Form.Text>
-//         </Form.Group>
-
-//         <Form.Group controlId="formUsername">
-// <Form.Label>Nombre de usuario:</Form.Label>
-// <Form.Control
-// type="text"
-// name="username"
-// placeholder="Apellido..."
-// required={false}
-// onChange={(e) => inputHandler(e)}
-// onBlur={(e) => checkError(e)}
-// className={
-// credencialesError.usernameError === ""
-// ? "inputBasicDesign"
-// : "inputBasicDesign inputErrorDesign"
-// }
-// />
-// <Form.Control
-// name="username"
-// placeholder="Nombre de usuario..."
-// required={true}
-// onChange={(e) => inputHandler(e)}
-// onBlur={(e) => checkError(e)}
-// className={
-// credencialesError.usernameError === ""
-// ? "inputBasicDesign"
-// : "inputBasicDesign inputErrorDesign is-invalid"
-// }
-// />
-// <Form.Text className="text-muted">
-// {credencialesError.usernameError}
-// </Form.Text>
-
-//   <div className="invalid-feedback">
-//     {credencialesError.emailError}
-//   </div>
-//   <button
-//     className={
-//       registerAct
-//         ? "btn btn-primary registerSendAct"
-//         : "btn btn-primary registerSendDeac"
-//     }
-//     onClick={registerAct ? userRegister : () => {}}
-//   >
-//     register me
-//   </button>
- 
-// </Form.Group>
-// </Form>
-// </div>)}
 import React, { useState, useEffect } from "react";
 import "./Register.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -348,6 +187,7 @@ import { useJwt } from "react-jwt";
 import { Col, Container, Row } from "react-bootstrap";
 import { userData } from "../../containers/User/userSlice";
 import { errorCheck } from "../../services/usefull";
+import { createUserProfile } from "../../services/apiCalls";
 
 
 export const Register = () => {
@@ -359,14 +199,24 @@ export const Register = () => {
   if(token) {
     navigate('/')
   }
-
+  // function comprobarTipoDeDatos(register) {
+  //   if (typeof register !== "undefined" && register !== null) {
+  //     if (typeof register.data !== "undefined") {
+  //       console.log("El tipo de datos de miObjeto.data es: " + typeof register.data);
+  //     } else {
+  //       console.log("La propiedad 'data' no existe en el objeto");
+  //     }
+  //   } else {
+  //     console.log("El objeto es undefined o null");
+  //   }
+  // }
 
   const [user, setUser] = useState({
     username: "",
     name: "",
     email: "",
     password: "",
-    password2: "",
+    // password2: "",
   });
 
   const [userError, setUserError] = useState({
@@ -374,16 +224,19 @@ export const Register = () => {
     nameerror: "",
     emailerror: "",
     passworderror: "",
-    password2error: "",
+    // password2error: "",
     incompleteerror: "",
     emailAlreadyInBBDD: "",
   });
 
   const registerUser = async (body) => {
+    console.log(hola)
     let res = await axios.post(
       "https://localhost:3000",
       body
+      
     );
+    console.log()
     navigate("/")
   };
 
@@ -413,12 +266,17 @@ export const Register = () => {
         incompleteerror: "",
       }));
       registerUser(body)
+     
       .then((created) => console.log(created))
       .catch((error) => {setUserError(
         (prevState) => (
+          
           {
             ...prevState,
             emailAlreadyInBBDD: error.response.data,
+          
+              
+             
           }
         )
       );});
@@ -433,19 +291,18 @@ export const Register = () => {
 
   const body = {
     username: user.username,
-    name: user.name,
     email: user.email,
     password: user.password,
-    password2: user.password2,
+    // password2: user.password2,
   };
 
   const validateBody = (body) => {
     if (
       body.username !== "" &&
-      body.name !== "" &&
+      // body.name !== "" &&
       body.email !== "" &&
-      body.password !== "" &&
-      body.password2 !== ""
+      body.password !== "" 
+      // body.password2 !== ""
     ) {
       return true;
     }
@@ -488,7 +345,6 @@ export const Register = () => {
               name="name"
             />
           
-            <div className="errorInput">{userError.cityerror}</div>
             <input
               onBlur={(e) =>
                 errorHandler(e.target.name, e.target.value, "email")
@@ -510,8 +366,8 @@ export const Register = () => {
               placeholder="  Password ... |"
               name="password"
             />
-            <div className="errorInput">{userError.passworderror}</div>
-            <input
+             <div className="errorInput">{userError.passworderror}</div>
+            {/* <input
               onBlur={(e) =>
                 errorHandler(
                   e.target.name,
@@ -526,7 +382,7 @@ export const Register = () => {
               placeholder="  Repeat password ... |"
               name="password2"
             />
-            <div className="errorInput">{userError.password2error}</div>
+            <div className="errorInput">{userError.password2error}</div> */} 
 
             <div className="col d-flex text-center align-items-center buttonDivReg">
               <button className="buttonDesignRegister">Register</button>

@@ -15,8 +15,17 @@ export const bringUsers = async (token) => {
     };
 
     return await axios.get(`${root}/api/users`, config);
-}
-export const registerUser = async (body) => {
 
-    return await axios.post(`${root}/auth/register`, body);
-} 
+
+
+
+}
+
+export const createUserProfile = async (body) => {
+
+  return await axios.post(`${root}/auth/register`, body)
+};
+// export const registerUser = async (body) => {
+
+//     return await axios.post(`${root}/auth/register`, body);
+// } 
