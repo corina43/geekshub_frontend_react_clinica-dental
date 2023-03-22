@@ -154,14 +154,13 @@ export const Login = () => {
         dispatch(login({ credentials: datosBackend }));
         console.log(datosBackend);
 
-        //Una vez nos hemos logeado...mostramos mensaje de bienvenida...
-        // setWelcome(`Bienvenid@ de nuevo ${datosBackend.usuario.name}`);
+      
 
         //Redirección a Home
 
         setTimeout(() => {
           navigate("/");
-        }, 3000);
+        }, 5000);
       })
       .catch((error) => console.log(error));
   };

@@ -38,3 +38,14 @@ export const getUserProfile = async (body, token) => {
     console.error(error);
   }
 };
+
+export const getPatientInfo = async (token) => {
+
+  let config = {
+      headers: {
+          'Authorization': 'Bearer '+ token,  
+      }
+  }
+
+  return await axios.get(`${root}/patient/profile`, config);
+};

@@ -150,10 +150,53 @@
 //   };
   
 //   export default Profile;
-import React from 'react'
+
+
+
+
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { CardPatient } from '../../common/CardPatient/CardPatient';
+import { UserNavigator } from '../../common/userNavigator/UserNavigator';
+import { userData } from '../../containers/User/userSlice';
+import { getPatientInfo } from '../../services/apiCalls';
 
 export const Profile = () => {
-  return (
-    <div><h1>hola</h1></div>
-  )
-}
+
+   
+    const [patients, setPatients] = useState([]);
+
+    const dataRdx = useSelector(userData);
+
+    const dispatch = useDispatch();
+
+    const navigate = useNavigate();
+
+  
+    useEffect(() => {
+
+        if(patients.length === 0){
+
+            getPatientInfo(dataRdx.userCredentials.token)
+                .then(
+                    result => {
+                        setPatients(result.data.data[0].Patients)
+                    }
+                )
+                .catch(error => console.log(error));
+        };
+    },[patients]);
+
+    return (
+        <>
+            <UserNavigator/>
+                {patients.map(data => 
+                        {
+                            return <CardPatient key={data.DNI} dataPatient={data}></CardPatient>
+                        }
+                    )
+                }
+        </>
+    )
+};
