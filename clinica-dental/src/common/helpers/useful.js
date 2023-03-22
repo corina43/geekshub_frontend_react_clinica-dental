@@ -1,9 +1,10 @@
 export const validate = (name, data, required) => {
     switch (name) {
       case "name":
-      case "surname":
+        case "apellido":
       case "nombre":
-      case "apellido":
+        case "surname":
+          case "username":
         //Aqui evaluaremos strings que NO pueden tener números
   
         if (data === "" && required === true) {

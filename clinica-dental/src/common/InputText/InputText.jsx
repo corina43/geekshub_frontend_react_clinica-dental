@@ -3,10 +3,11 @@ import './InputText.css';
  
 export const InputText = ({
     type, 
-    placeholder, 
     name, 
+    placeholder, 
+    required,
+    validateFunction,
     changeFunction, 
-    validateFunction
 }) => {
      return (
          <>
@@ -15,8 +16,9 @@ export const InputText = ({
                 type={type}
                 name={name}
                 placeholder={placeholder}
-                onChange={changeFunction}      
-                onBlur={validateFunction}     
+                required={required}
+                onBlur={(e) => validateFunction(e)}  
+                onChange = {(e) => changeFunction(e) }  
             />
          </>
      )

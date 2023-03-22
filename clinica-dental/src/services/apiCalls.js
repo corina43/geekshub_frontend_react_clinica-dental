@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const root = "http://localhost:3000"
+const root = "https://geekshubs-fsd-val-proyecto41-production-de02.up.railway.app"
 
 export const logMe = async (body) => {
 
@@ -15,10 +15,6 @@ export const bringUsers = async (token) => {
     };
 
     return await axios.get(`${root}/api/users`, config);
-
-
-
-
 }
 
 export const createUserProfile = async (body) => {
