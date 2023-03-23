@@ -32,7 +32,7 @@ export const getUserProfile = async (body, token) => {
     password: body.password,
   };
   try {
-    let res = await axios.patch(`${root}/users/edit`, bodyParameters, config);
+    let res = await axios.patch(`${root}/user/profile`, bodyParameters, config);
     return res.data.resp;
   } catch (error) {
     console.error(error);
@@ -40,12 +40,12 @@ export const getUserProfile = async (body, token) => {
 };
 
 export const getPatientInfo = async (token) => {
-
+  console.log(token);
   let config = {
       headers: {
-          'Authorization': 'Bearer '+ token,  
+        Authorization: `Bearer ${token}` 
       }
   }
-
-  return await axios.get(`${root}/patient/profile`, config);
+  let res = await axios.get(`${root}/patient/profile`, config);
+  return res.data
 };

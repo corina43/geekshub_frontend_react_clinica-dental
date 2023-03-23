@@ -3,12 +3,12 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-//import './CardPatient.css';
+import './CardPatient.css'
 
 export const CardPatient = ({dataPatient}) => {
 
     return (
-        <Container fluid className='cardPatientDesign'>
+        <Container fluid className='cardPatientDesign bg-succes'>
             <Row>
                 <Col xs= {1}></Col>
                 <Col xs= {4}>Name:</Col>

@@ -75,7 +75,7 @@
 //     };
   
 //      if (decodedToken) {
-//       return (
+//    (
 //         <Container className="container-fluid">
 //           <Row className="row rowDesign">
 //             <Col className="col col-sm-6 editData d-flex justify-content-center align-items-center">
@@ -94,7 +94,7 @@
 //                     value={user.username}
 //                     onChange={inputHandler}
 //                   />
-  
+//           return
 //                   <input
 //                     onBlur={(e) =>
 //                       errorHandler(e.target.name, e.target.value, "password")
@@ -151,37 +151,26 @@
   
 //   export default Profile;
 
-
-
-
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { CardPatient } from '../../common/CardPatient/CardPatient';
 import { UserNavigator } from '../../common/userNavigator/UserNavigator';
+import { useSelector } from 'react-redux';
 import { userData } from '../../containers/User/userSlice';
 import { getPatientInfo } from '../../services/apiCalls';
 
 export const Profile = () => {
-
-   
     const [patients, setPatients] = useState([]);
-
     const dataRdx = useSelector(userData);
-
-    const dispatch = useDispatch();
-
     const navigate = useNavigate();
-
   
     useEffect(() => {
-
         if(patients.length === 0){
-
-            getPatientInfo(dataRdx.userCredentials.token)
+            console.log(dataRdx?.credentials?.token)
+            getPatientInfo(dataRdx?.credentials?.token)
                 .then(
                     result => {
-                        setPatients(result.data.data[0].Patients)
+                        setPatients(result.data[0].Patients)
                     }
                 )
                 .catch(error => console.log(error));
@@ -190,7 +179,7 @@ export const Profile = () => {
 
     return (
         <>
-            <UserNavigator/>
+            {/* <UserNavigator/> */}
                 {patients.map(data => 
                         {
                             return <CardPatient key={data.DNI} dataPatient={data}></CardPatient>

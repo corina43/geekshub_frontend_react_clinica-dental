@@ -72,7 +72,7 @@ export const Header = () => {
         </Nav>
 
        
-        {/* <Nav
+          <Nav
            onClick={() => navigate("/profile")}
            className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
         >
@@ -80,7 +80,7 @@ export const Header = () => {
           
             Hi, {decodeToken.name}!
           </div>
-        </Nav> */}
+        </Nav>  
                  {isAdmin() ? (
            <Nav
              onClick={() => navigate("/admin")}
@@ -126,7 +126,7 @@ return (
       Appointments
         </Nav>
         <Nav
-           onClick={() => navigate("/Profile")}
+           onClick={() => navigate("/profile")}
           className="fw-bold m-auto text-center linkDesign"
         >
        Profile
@@ -165,106 +165,3 @@ return (
 
 
 
-// import 'bootstrap/dist/css/bootstrap.css'
-// import { Nav, Navbar, Container, Button, Modal } from 'react-bootstrap'
-// import React, { useState } from 'react'
-// //import '../css/menu.css'
-// //import "../css/login.css"
-// import { Link, useNavigate } from 'react-router-dom';
-// //import Swal from 'sweetalert2'
-// //import Sign_in from '../components/SignI_in'
-// import logo_img from "../images/logo.png";
-// import "./Header.css"
-
-// export const Header =() => {
-
-//     let storedTheme = localStorage.getItem("theme");
-//     let userData = JSON.parse(sessionStorage.getItem("user"));
-  
-//     const defaultDark = storedTheme === "dark" || (storedTheme === null);
-  
-//     if (defaultDark) {
-//       localStorage.setItem("theme", "dark");
-//       document.documentElement.setAttribute("data-theme", "dark");
-//     }
-  
-//     const navigate = useNavigate();
-  
-//     // pop up sign in
-//     const [showModelSignIn, setShowModelSignIn] = useState(false);
-//     const handleCloseModelSignIn = () => setShowModelSignIn(false);
-//     const handleShowModelSignIn = () => setShowModelSignIn(true);
-  
-//     const sendUserToProfile = () => {
-//       navigate.push(`/Profile/${userData._id}`);
-//     }
-  
-//     const LogOutUser = () => {
-//       Swal.fire({
-//         title: 'Are you sure you want to leave?',
-//         icon: 'question',
-//         toast: true,
-//         position: 'top-end',
-//         showDenyButton: true,
-//         confirmButtonText: 'yes',
-//         denyButtonText: `no`,
-//         confirmButtonColor: "green",
-      
-//       }).then((result) => {
-//         if (result.isConfirmed) {
-//           sessionStorage.clear('user');
-//           history.push("/");
-//           window.location.reload(false);
-//         }
-//       })
-//     }
-  
-//     // send this function to Sign_In component
-//     const hideModelSignIn = () => {
-//       setShowModelSignIn(false);
-//     }
-  
-//     return (
-//       <>
-//         <div className="menu">
-//           <Navbar collapseOnSelect expand="sm" >
-//             <Container className="nav-container">
-//               <Link to='/'><Navbar.Brand className='logo' ><img src={logo_img} alt="icon" />
-//               <h6>Noa Miralles Dental Care</h6>
-//               </Navbar.Brand></Link>
-//               <Navbar.Toggle aria-controls="responsive-navbar-nav" ></Navbar.Toggle>
-//               <Navbar.Collapse id="responsive-navbar-nav">
-//                 <Nav className="me-auto">
-//                   <Nav.Link as={Link} to="/">Home</Nav.Link>
-//                   <Nav.Link as={Link} to="/About">About</Nav.Link>
-//                 </Nav>
-//                 <Navbar.Collapse className="justify-content-end link">
-//                   {userData != null ?
-//                     <div className='imgPrf'>
-//                       <Button onClick={sendUserToProfile}>
-//                         Hello {userData.FirstName} (Profile)
-//                       </Button>
-//                       <br />
-//                       <Button variant="outline-danger"
-//                         onClick={LogOutUser}>
-//                         Log out
-//                       </Button>
-//                     </div>
-//                     :
-//                     <>
-//                       <Nav.Link onClick={handleShowModelSignIn}>Login</Nav.Link>
-//                       <Nav.Link as={Link} to='/Register'>Register</Nav.Link>
-//                     </>
-//                   }
-//                 </Navbar.Collapse>
-//                 {/* model popup show Sign in */}
-//                 <Modal show={showModelSignIn} onHide={handleCloseModelSignIn} >
-//                   {/* <Sign_in hideSignIn={hideModelSignIn} /> */}
-//                 </Modal>
-//               </Navbar.Collapse>
-//             </Container>
-//           </Navbar>
-//         </div>
-//       </>
-//     );
-//   }

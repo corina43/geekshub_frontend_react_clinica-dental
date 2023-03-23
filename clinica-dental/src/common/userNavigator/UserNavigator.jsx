@@ -10,7 +10,7 @@ import { Navigator } from '../Navigator/Navigator';
     return (
         <Container>
             <Row>
-                <Col className='profileTabs'>
+                <Col className='profileButton'>
                     <Navigator className={'dissableButton'} route={'Patients'} destination={'/profile'}/>
                     <Navigator className={'dissableButton'} route={'Appointments'} destination={'/appointments'}/>
                     <Navigator className={'dissableButton'} route={'GetInfoProfile'} destination={'/profile'}/>

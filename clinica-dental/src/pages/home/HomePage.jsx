@@ -30,7 +30,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
                       margin: "0",
                       textAlign: "left",
                       lineHeight: "1.2",
-                      color: "hsl(218, 70%, 18%);",
+                      color: "hsl(218, 70%, 18%)",
                     }}
                   >
                     Cuidamos tu sonrisa
