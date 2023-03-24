@@ -49,3 +49,14 @@ export const getPatientInfo = async (token) => {
   let res = await axios.get(`${root}/patient/profile`, config);
   return res.data
 };
+
+export const getDoctorAppointment = async (token) => {
+
+  let config = {
+      headers: {
+          'Authorization': 'Bearer '+ token,  
+      }
+  }
+
+  return await axios.get(`${root}/doctor/appointment`, config)
+};

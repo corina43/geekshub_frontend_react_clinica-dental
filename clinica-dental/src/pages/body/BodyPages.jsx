@@ -1,12 +1,14 @@
 import React from 'react';
 import {  Routes, Route } from 'react-router-dom';
+import Users from '../admin/Users';
+import DoctorAppointments from '../AppointmentDoctores/AppointmentDoctores';
 
 
 
 
-import { AccountPage } from '../account/AccountPage'
-import { UsersPage } from '../admin/UsersPage'
-import { AppointmentPage } from '../appointment/AppointmentPage'
+//import { AccountPage } from '../account/AccountPage'
+
+
 
 import { HomePage } from '../home/HomePage'
 import { Login } from '../login/LoginPage';
@@ -28,11 +30,11 @@ export const BodyPages =() =>{
       <Route  path ="/login" element={<Login/>} />
       <Route  path ="/register" element={<Register />} />
       <Route  path ="/profile" element={<Profile/>} />
-      {/* <Route  path ="/Logout" element={<Logout/>} /> */}
-      <Route  path ="/appointment" element={<AppointmentPage/>} />
-      <Route  path ="/admin/users" element={<UsersPage/>} />
+       {/* <Route  path ="/Logout" element={<Logout/>} />  */}
+      <Route  path ="/appointmentDoctores" element={<DoctorAppointments/>} />
+       <Route  path ="/admin/users" element={<Users/>} /> 
        <Route  path ="*" element={<HomePage/>}/> 
-
+     
      
    </Routes>
    </>

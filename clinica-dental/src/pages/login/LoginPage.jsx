@@ -58,12 +58,12 @@ export const Login = () => {
         };
         //Este es el momento en el que guardo en REDUX
         dispatch(login({ credentials: datosBackend }));
-        setWelcome('Ok')
+        setWelcome('Welcome')
       
         //Redirección a Home
         setTimeout(() => {
           navigate("/");
-        }, 5000);
+        }, 10000);
       })
       .catch((error) => console.log(error));
   };

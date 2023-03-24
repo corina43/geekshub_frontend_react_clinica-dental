@@ -1,4 +1,6 @@
 .cardPatientDesign{
-    background-color: aqua;
-    border: solid 1px;
+    background-color: rgb(77, 134, 187);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 0.1em solid cadetblue;
 }
