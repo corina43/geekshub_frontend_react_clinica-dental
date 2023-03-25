@@ -51,19 +51,19 @@ export const Register = () => {
 
   console.log(credenciales);
   for (let errorFound in credencialesError) {
-    // console.log(credenciales[errorFound].validated);
+ 
     if (credencialesError[errorFound] !== "" ) {
       setRegisterAct(false);
       return;
     }}
     for (let gol in credenciales) {
-      // console.log(credenciales[errorFound].validated);
+     
       if (credenciales[gol] === "" ) {
         setRegisterAct(false);
         return;
       }}
       for (let validated in credencialesValido) {
-        // console.log(credenciales[errorFound].validated);
+     
         if (credencialesValido[validated] === false) {
           setRegisterAct(false);
           return;

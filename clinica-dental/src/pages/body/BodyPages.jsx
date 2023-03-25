@@ -1,7 +1,8 @@
 import React from 'react';
 import {  Routes, Route } from 'react-router-dom';
 import Users from '../admin/Users';
-import DoctorAppointments from '../AppointmentDoctores/AppointmentDoctores';
+import { DoctorAppointments } from '../AppointmentDoctores/AppointmentDoctores';
+
 
 
 
@@ -31,7 +32,7 @@ export const BodyPages =() =>{
       <Route  path ="/register" element={<Register />} />
       <Route  path ="/profile" element={<Profile/>} />
        {/* <Route  path ="/Logout" element={<Logout/>} />  */}
-      <Route  path ="/appointmentDoctores" element={<DoctorAppointments/>} />
+      <Route  path ="/appointmentDoctor" element={<DoctorAppointments/>} />
        <Route  path ="/admin/users" element={<Users/>} /> 
        <Route  path ="*" element={<HomePage/>}/> 
      

@@ -49,13 +49,13 @@ export const Login = () => {
       .then((respuesta) => {
         console.log(respuesta);
         let decode = decodeToken(respuesta.data.data)
-        console.log(decode, "decode");
-        console.log(respuesta.data, "respuesta.data");
-
+        
         let datosBackend = {
           token: respuesta.data.data,
           usuario: decode,
         };
+        console.log('datosBackend');
+        console.log(datosBackend);
         //Este es el momento en el que guardo en REDUX
         dispatch(login({ credentials: datosBackend }));
         setWelcome('Welcome')

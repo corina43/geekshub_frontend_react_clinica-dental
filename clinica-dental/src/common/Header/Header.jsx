@@ -71,12 +71,12 @@ useEffect(()=>{
             >
               Profile
             </Nav>
-            <Nav
+            {/* <Nav
               onClick={() => navigate("/admin/users")}
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
             >
               Admin
-            </Nav>
+            </Nav> */}
             <Nav
               onClick={() => navigate("/about")}
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
@@ -126,11 +126,7 @@ useEffect(()=>{
             >
               Home
             </Nav>
-            {/* <NavDropdown className=""="Admin">
-						<NavDropdown.Item as={NavLink} to={routes.admin.users}>
-							Usuarios
-						</NavDropdown.Item>
-					</NavDropdown> */}
+          
             <Nav
               onClick={() => navigate("/appointmentDoctor")}
               className="fw-bold m-auto text-center linkDesign"
