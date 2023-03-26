@@ -26,7 +26,7 @@ export  const DoctorAppointments = () => {
       <h1>Lista de citas de los doctores</h1>
       
       {/* appointment.appointment.data.data[0].Appointments[0] */}
-      {appointment.appointment.data.data[0].Appointments && (
+       {appointment.appointment.data.data[0].Appointments && (
         <>
           {appointment.appointment.data.data[0].Appointments.map(data => 
             {
@@ -37,7 +37,7 @@ export  const DoctorAppointments = () => {
           )}
         </>
         )
-      }
+      } 
     </div>
   );
 };

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import { decodeToken } from "react-jwt";
-//  import { NavLink } from "react-router-dom";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import { login, logout, userData } from "../../containers/User/userSlice";
 import { useSelector } from "react-redux";
@@ -71,12 +70,12 @@ useEffect(()=>{
             >
               Profile
             </Nav>
-            {/* <Nav
-              onClick={() => navigate("/admin/users")}
+             <Nav
+              onClick={() => navigate("/admin")}
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
             >
               Admin
-            </Nav> */}
+            </Nav> 
             <Nav
               onClick={() => navigate("/about")}
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
@@ -92,7 +91,7 @@ useEffect(()=>{
             </Nav>
             {isAdmin ? (
               <Nav
-                onClick={() => navigate("/admin/users")}
+                onClick={() => navigate("/admin")}
                 className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
               >
                 Admin

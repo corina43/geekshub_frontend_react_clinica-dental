@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import './Users.css';
 import { bringUsers } from '../../services/apiCalls';
 import { useDispatch, useSelector } from "react-redux";
 import { userData } from '../../containers/User/userSlice';
-import { addChoosen } from '../detailSlice';
+import { addChoosen } from '../../containers/User/detailSlice';
 import { useNavigate } from 'react-router-dom';
 
-export const Users = () => {
+export const Admin = () => {
     const [users, setUsers] = useState([]);
     const dataRdx = useSelector(userData);
     const dispatch = useDispatch();

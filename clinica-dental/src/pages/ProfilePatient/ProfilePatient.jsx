@@ -5,32 +5,32 @@ import { CardPatient } from '../../common/CardPatient/CardPatient';
 
 import { useSelector } from 'react-redux';
 import { userData } from '../../containers/User/userSlice';
-import { createUserProfile } from '../../services/apiCalls';
+import { getPatientInfo } from '../../services/apiCalls';
 
 export const Profile = () => {
-    const [users, setUsers] = useState([]);
+    const [patients, setPatients] = useState([]);
     const dataRdx = useSelector(userData);
     const navigate = useNavigate();
   
     useEffect(() => {
-        if(users.length === 0){
+        if(patients.length === 0){
             console.log(dataRdx?.credentials?.token)
-            createUserProfile(dataRdx?.credentials?.token)
+            getPatientInfo(dataRdx?.credentials?.token)
                 .then(
                     result => {
-                        setUsers(result.data[0].Users)
+                        setPatients(result.data[0].Patients)
                     }
                 )
                 .catch(error => console.log(error));
         };
-    },[users]);
+    },[patients]);
 
     return (
         <>
          
-                {users.map(data => 
+                {patients.map(data => 
                         {
-                            return <CardUsers key={data} dataUser={data}></CardUsers>
+                            return <CardPatient key={data} dataPatient={data}></CardPatient>
                         }
                     )
                 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {  Routes, Route } from 'react-router-dom';
-import Users from '../admin/Users';
+import { Admin } from '../admin/Admin';
+
 import { DoctorAppointments } from '../AppointmentDoctores/AppointmentDoctores';
 
 
@@ -33,7 +34,8 @@ export const BodyPages =() =>{
       <Route  path ="/profile" element={<Profile/>} />
        {/* <Route  path ="/Logout" element={<Logout/>} />  */}
       <Route  path ="/appointmentDoctor" element={<DoctorAppointments/>} />
-       <Route  path ="/admin/users" element={<Users/>} /> 
+       <Route  path ="/admin" element={<Admin/>} /> 
+       {/* <Route path = "/users" element={<Users />}/> */}
        <Route  path ="*" element={<HomePage/>}/> 
      
      

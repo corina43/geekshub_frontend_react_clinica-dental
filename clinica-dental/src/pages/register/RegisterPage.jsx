@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { InputText } from "../../common/InputText/InputText";
 import { validate } from "../../common/helpers/useful";
-// import { registerUser } from "../../services/apiCalls";
- import{createUserProfile} from  '../../services/apiCalls'
+import{createUserProfile} from  '../../services/apiCalls'
 
 
 
@@ -143,7 +142,7 @@ return (
       type={"email"}
       name={"email"}
       placeholder={"email..."}
-      required={false}
+      required={true}
       changeFunction={(e) => inputHandler(e)}
       validateFunction={(e) => checkError(e)}
     />
