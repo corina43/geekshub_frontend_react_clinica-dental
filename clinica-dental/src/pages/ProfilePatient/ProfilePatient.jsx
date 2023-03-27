@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { userData } from '../../containers/User/userSlice';
 import { getPatientInfo } from '../../services/apiCalls';
 
-export const Profile = () => {
+export const Patient = () => {
     const [patients, setPatients] = useState([]);
     const dataRdx = useSelector(userData);
     const navigate = useNavigate();

@@ -1,5 +1,6 @@
 import React from 'react';
 import {  Routes, Route } from 'react-router-dom';
+import { CardPatient } from '../../common/CardPatient/CardPatient';
 import { Admin } from '../admin/Admin';
 
 import { DoctorAppointments } from '../AppointmentDoctores/AppointmentDoctores';
@@ -15,6 +16,7 @@ import { DoctorAppointments } from '../AppointmentDoctores/AppointmentDoctores';
 import { HomePage } from '../home/HomePage'
 import { Login } from '../login/LoginPage';
 import { Profile } from '../Profile/Profile';
+import { Patient } from '../ProfilePatient/ProfilePatient';
 
 import { Register } from '../register/RegisterPage';
 
@@ -32,6 +34,7 @@ export const BodyPages =() =>{
       <Route  path ="/login" element={<Login/>} />
       <Route  path ="/register" element={<Register />} />
       <Route  path ="/profile" element={<Profile/>} />
+      <Route  path ="/Patient" element={<Patient/>} />
        {/* <Route  path ="/Logout" element={<Logout/>} />  */}
       <Route  path ="/appointmentDoctor" element={<DoctorAppointments/>} />
        <Route  path ="/admin" element={<Admin/>} /> 

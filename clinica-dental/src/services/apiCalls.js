@@ -21,7 +21,14 @@ export const bringUsers = async (token) => {
 
 export const createUserProfile = async (body) => {
 
-  return await axios.post(`${root}/auth/register`, body)
+  let _body={
+    username: body.name,
+    email:body.email,
+    password:body.password
+  }
+  console.log(_body)
+  let res = await axios.post(`${root}/auth/register`, _body)
+  console.log(res)
 };
  
 

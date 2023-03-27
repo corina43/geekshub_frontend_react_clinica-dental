@@ -70,6 +70,12 @@ useEffect(()=>{
             >
               Profile
             </Nav>
+            <Nav
+              onClick={() => navigate("/patient")}
+              className="fw-bold m-auto text-center linkDesign"
+            >
+              Patient
+            </Nav>
              <Nav
               onClick={() => navigate("/admin")}
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"

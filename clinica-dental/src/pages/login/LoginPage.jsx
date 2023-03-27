@@ -63,7 +63,7 @@ export const Login = () => {
         //Redirección a Home
         setTimeout(() => {
           navigate("/");
-        }, 10000);
+        }, 5000);
       })
       .catch((error) => console.log(error));
   };

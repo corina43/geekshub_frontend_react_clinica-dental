@@ -113,7 +113,7 @@ const userRegister = () => {
   createUserProfile(credenciales)
   .then(() => {
     console.log("todo correcto");
-    navigate('/login')
+     navigate('/login')
   })
   .catch((errorFound) => console.log(errorFound));
 };
@@ -128,7 +128,7 @@ return (
           : "inputBasicDesign inputErrorDesign"
       }
       type={"text"}
-      name={"username"}
+      name={"name"}
       placeholder={"nombre..."}
       required={true}
       changeFunction={(e) => inputHandler(e)}
