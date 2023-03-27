@@ -70,7 +70,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
                   Trabajamos en días festivos y también trabajamos hasta tarde en días regulares. En caso de emergencias, aceptamos reservas.
                 </p>
 
-                <Link to={"/register"}>
+                <Link to={"/login"}>
                   <Button variant="primary">Chatear con el doctor</Button>
                 </Link>
               </div>

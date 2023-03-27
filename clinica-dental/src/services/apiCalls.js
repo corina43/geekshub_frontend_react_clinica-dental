@@ -49,7 +49,7 @@ export const getUserProfile = async (body, token) => {
 };
 
 export const getPatientInfo = async (token) => {
-  console.log(token);
+  // console.log(token);
   let config = {
       headers: {
         Authorization: `Bearer ${token}` 
@@ -62,10 +62,10 @@ export const getPatientInfo = async (token) => {
 export const getDoctorAppointment = async (token) => {
 
   let config = {
-      headers: {
-          'Authorization': 'Bearer '+ token,  
-      }
-  }
+    headers: {
+      Authorization: `Bearer ${token}` 
+    }
+}
 
   return await axios.get(`${root}/doctor/appointment`, config)
 };

@@ -6,6 +6,7 @@ import { CardPatient } from '../../common/CardPatient/CardPatient';
 import { useSelector } from 'react-redux';
 import { userData } from '../../containers/User/userSlice';
 import { getPatientInfo } from '../../services/apiCalls';
+import { ProgressBar } from 'react-bootstrap';
 
 export const Patient = () => {
     const [patients, setPatients] = useState([]);
@@ -18,22 +19,41 @@ export const Patient = () => {
             getPatientInfo(dataRdx?.credentials?.token)
                 .then(
                     result => {
-                        setPatients(result.data[0].Patients)
+                        console.log(result, "hola soy result")
+                        setPatients(result.data)
                     }
                 )
                 .catch(error => console.log(error));
         };
     },[patients]);
+    console.log(patients, "patient info")
 
     return (
         <>
-         
-                {patients.map(data => 
+{/*          
+                {patients.map((data => 
                         {
-                            return <CardPatient key={data} dataPatient={data}></CardPatient>
+                            return( <div key={data.email} > <div> {data.email}</div></div>)
                         }
-                    )
-                }
+                    ))
+                } */}
+            <div>
+                my profile:
+                {patients.length > 0 ? (
+                    <div className="cardsContainer">
+                        {patients.map((data) => {
+                            return (
+                                <div key={ data.id }>
+                                        <div> {data.user_name}</div>
+                                        <div> {data.email}</div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                ) : (
+                    <ProgressBar animated now={45} />
+                )}
+            </div>
         </>
     )
 };

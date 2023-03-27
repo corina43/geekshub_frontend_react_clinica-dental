@@ -9,10 +9,6 @@ import { DoctorAppointments } from '../AppointmentDoctores/AppointmentDoctores';
 
 
 
-//import { AccountPage } from '../account/AccountPage'
-
-
-
 import { HomePage } from '../home/HomePage'
 import { Login } from '../login/LoginPage';
 import { Profile } from '../Profile/Profile';
@@ -35,11 +31,11 @@ export const BodyPages =() =>{
       <Route  path ="/register" element={<Register />} />
       <Route  path ="/profile" element={<Profile/>} />
       <Route  path ="/Patient" element={<Patient/>} />
-       {/* <Route  path ="/Logout" element={<Logout/>} />  */}
+      {/* <Route  path ="/Logout" element={<Logout/>} />   */}
       <Route  path ="/appointmentDoctor" element={<DoctorAppointments/>} />
-       <Route  path ="/admin" element={<Admin/>} /> 
-       {/* <Route path = "/users" element={<Users />}/> */}
-       <Route  path ="*" element={<HomePage/>}/> 
+      <Route  path ="/admin" element={<Admin/>} /> 
+      {/* <Route path = "/users" element={<Users />}/>  */}
+      <Route  path ="*" element={<HomePage/>}/> 
      
      
    </Routes>
