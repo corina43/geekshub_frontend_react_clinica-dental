@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import { InputText } from "../../common/InputText/InputText";
 import { validate } from "../../common/helpers/useful";
 import{createUserProfile} from  '../../services/apiCalls'
+import { useNavigate } from "react-router-dom";
 
 
 
 export const Register = () => {
+
+  const navigate = useNavigate();
   // 1 - Primero siempre se comprueba el valor de los hooks
   const [credenciales, setCredenciales] = useState({
     username: "",
@@ -110,6 +113,7 @@ const userRegister = () => {
   createUserProfile(credenciales)
   .then(() => {
     console.log("todo correcto");
+    navigate('/login')
   })
   .catch((errorFound) => console.log(errorFound));
 };
