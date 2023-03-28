@@ -69,3 +69,5 @@ export const getDoctorAppointment = async (token) => {
 
   return await axios.get(`${root}/doctor/appointment`, config)
 };
+
+

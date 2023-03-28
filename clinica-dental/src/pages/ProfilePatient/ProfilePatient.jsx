@@ -1,8 +1,6 @@
 
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CardPatient } from '../../common/CardPatient/CardPatient';
-
 import { useSelector } from 'react-redux';
 import { userData } from '../../containers/User/userSlice';
 import { getPatientInfo } from '../../services/apiCalls';
@@ -30,15 +28,10 @@ export const Patient = () => {
 
     return (
         <>
-{/*          
-                {patients.map((data => 
-                        {
-                            return( <div key={data.email} > <div> {data.email}</div></div>)
-                        }
-                    ))
-                } */}
+
             <div>
-                my profile:
+                <h6>my profile:</h6>
+                
                 {patients.length > 0 ? (
                     <div className="cardsContainer">
                         {patients.map((data) => {
@@ -57,3 +50,9 @@ export const Patient = () => {
         </>
     )
 };
+
+
+
+
+
+

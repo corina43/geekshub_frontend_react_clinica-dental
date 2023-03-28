@@ -1,7 +1,7 @@
 import React from 'react';
 import {  Routes, Route } from 'react-router-dom';
-import { CardPatient } from '../../common/CardPatient/CardPatient';
-import { Admin } from '../admin/Admin';
+// import { CardPatient } from '../../common/CardPatient/CardPatient';
+
 
 import { DoctorAppointments } from '../AppointmentDoctores/AppointmentDoctores';
 
@@ -15,7 +15,7 @@ import { Profile } from '../Profile/Profile';
 import { Patient } from '../ProfilePatient/ProfilePatient';
 
 import { Register } from '../register/RegisterPage';
-
+import {Admin} from '../../pages/admin/Admin'
 
 
 export const BodyPages =() =>{
