@@ -1,25 +1,40 @@
 import React from 'react';
 import './InputText.css';
+
+export const InputText = ({className, type, name, placeholder, required, error, changeFunction, blurFunction}) => {
+
  
-export const InputText = ({
-    type, 
-    name, 
-    placeholder, 
-    required,
-    validateFunction,
-    changeFunction, 
-}) => {
-     return (
-         <>
+    const nameConversor = (name) => {
+
+        let upperName = name.charAt(0).toUpperCase() + name.slice(1);
+
+        let splitUpperName = upperName.split("_")
+
+        let inputName = splitUpperName.join([" "])
+
+        
+        if( upperName === "Password2"){
+            inputName = 'Confirm Password';
+        };
+
+        return inputName;
+    };
+
+
+    return (
+        <>
+            <div className='inputName'>{nameConversor(name)}:</div>
             <input 
-                className='inputDesign'
+                className={className}
                 type={type}
                 name={name}
                 placeholder={placeholder}
                 required={required}
-                onBlur={(e) => validateFunction(e)}  
-                onChange = {(e) => changeFunction(e)}  
+                onChange={(e)=>changeFunction(e)}
+                onBlur={(e)=>blurFunction(e)}
+                maxLength={20}
             />
-         </>
-     )
-}
+            <div>{error}</div>
+        </>
+    );
+};

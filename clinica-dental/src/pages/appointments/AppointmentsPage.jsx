@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 //redux
@@ -83,8 +84,6 @@ export const CreatePatient = () => {
     };
 
     //USEEFFECT
-
-  // USEEFFECT
     useEffect(() => {
         //functions to make submit button activated
         //in case that a field shows an error
@@ -107,13 +106,11 @@ export const CreatePatient = () => {
             };
         };
     
-    //in case the data it's full validated
-    setSubmitActive(true);
-});
-
+        //in case the data is fully validated
+        setSubmitActive(true);
+    }, [errorInputField, validInputField]);
 
     //FUNCTIONS 
-
     // checkerror function
     const checkError = (e) => {
 
@@ -145,167 +142,165 @@ export const CreatePatient = () => {
     };
 
     // create new patient function
-    const newPatientCreation = () => {
-
-        createPatient(newPatient, userRdx.userCredentials.token)
-            .then((backendCall) => {
-
-                let backendData = {
-                    message: backendCall.data.message
-                };
-
-                setUserMessage(backendData.message);
-
-                setTimeout(() => {navigate('/profile')}, 2000)
-            })
-            .catch(error => console.log(error))
-    };
-
-    return (
-        <Container>
-            {
-                userMessage !== "" ?
-                (
-                    <Row>
-                    <Col xs={1}></Col>
-                    <Col xs={10}>{userMessage}</Col>
-                    <Col xs={1}></Col>
-                    
-                </Row>
-                ) : (
-                    <>
-                    <Row>
-                        <Col xs={1}></Col>
-                        <Col xs={10}>
-                        <InputText 
-                                className={'inputBasicDesign'}
-                                type={'text'}
-                                name={'name'}
-                                placeholder={'CORINA'}
-                                required={true}
-                                error={errorInputField.nameError}
-                                changeFunction={(e)=>inputHandler(e)}
-                                blurFunction={(e)=>checkError(e)}
-                                />
-                        </Col>
-                        <Col xs={1}></Col>
-                    </Row>
-                    <Row>
-                        <Col xs={1}></Col>
-                        <Col xs={10}>
-                        <InputText 
-                                className={'inputBasicDesign'}
-                                type={'text'}
-                                name={'surname'}
-                                placeholder={'Ciorpac'}
-                                required={true}
-                                error={errorInputField.surnameError}
-                                changeFunction={(e)=>inputHandler(e)}
-                                blurFunction={(e)=>checkError(e)}
-                                />
-                        </Col>
-                        <Col xs={1}></Col>
-                    </Row>
-                    <Row>
-                        <Col xs={1}></Col>
-                        <Col xs={10}>
-                        <InputText 
-                                className={'inputBasicDesign'}
-                                type={'text'}
-                                name={'DNI'}
-                                placeholder={'00000000A'}
-                                required={true}
-                                error={errorInputField.DNIError}
-                                changeFunction={(e)=>inputHandler(e)}
-                                blurFunction={(e)=>checkError(e)}
-                                />
-                        </Col>
-                        <Col xs={1}></Col>
-                    </Row>
-                    <Row>
-                        <Col xs={1}></Col>
-                        <Col xs={10}>
-                        <InputText
-                                className={'inputBasicDesign'}
-                                type={'text'}
-                                name={'phone_number'}
-                                placeholder={'+34 666 223 859'}
-                                required={true}
-                                error={errorInputField.phone_numberError}
-                                changeFunction={(e)=>inputHandler(e)}
-                                blurFunction={(e)=>checkError(e)}
-                            />
-                        </Col>
-                        <Col xs={1}></Col>
-                    </Row>
-                    <Row>
-                        <Col xs={1}></Col>
-                        <Col xs={10}>
-                        <InputText
-                                className={'inputBasicDesign'}
-                                type={'number'}
-                                name={'post_code'}
-                                placeholder={'46185'}
-                                required={true}
-                                error={errorInputField.post_codeError}
-                                changeFunction={(e)=>inputHandler(e)}
-                                blurFunction={(e)=>checkError(e)}
-                            />
-                        </Col>
-                        <Col xs={1}></Col>
-                    </Row>
-                    <Row>
-                        <Col xs={1}></Col>
-                        <Col xs={10}>
-                        <InputText 
-                                className={'inputBasicDesign'}
-                                type={'date'}
-                                name={'birth'}
-                                placeholder={'yyyy-mm-dd'}
-                                required={true}
-                                error={errorInputField.birthError}
-                                changeFunction={(e)=>inputHandler(e)}
-                                blurFunction={(e)=>checkError(e)}
-                                />
-                        </Col>
-                        <Col xs={1}></Col>
-                    </Row>
-                    <Row>
-                        <Col xs={1}></Col>
-                        <Col xs={10}>
-                        <InputText
-                                className={'inputBasicDesign'}
-                                type={'text'}
-                                name={'allergy'}
-                                placeholder={'allergy'}
-                                required={false}
-                                error={errorInputField.allergyError}
-                                changeFunction={(e)=>inputHandler(e)}
-                                blurFunction={(e)=>checkError(e)}
-                            />
-                        </Col>
-                        <Col xs={1}></Col>
-                    </Row>
-                 
-                    <Row>
-                        <Col xs={4}></Col>
-                        <Col xs={4}>
-                            <ButtonSubmit 
-                                className={
-                                    submitActive ? 'submitDesignPassive submitDesignActive textFormat' : 'submitDesignPassive'
-                                } 
-                                buttonName={'New Patient'}
-                                clickFunction={
-                                    submitActive ? () => newPatientCreation() : () => {}
-                                }
-                                />
-                        </Col>
-                        <Col xs={4}></Col>
-                    </Row>
-                    </>
-                )
-            }
-            
-        </Container>
-    );
+    // función para crear nuevo paciente
+const newPatientCreation = () => {
+    createPatient(newPatient, userRdx.userCredentials.token)
+        .then((backendCall) => {
+            let backendData = {
+                message: backendCall.data.message
+            };
+            setUserMessage(backendData.message);
+            setTimeout(() => {
+                navigate('/profile');
+            }, 2000);
+        })
+        .catch(error => console.log(error));
 };
+return (
+            <Container>
+                {
+                    userMessage !== "" ?
+                    (
+                        <Row>
+                        <Col xs={1}></Col>
+                        <Col xs={10}>{userMessage}</Col>
+                        <Col xs={1}></Col>
+                        
+                    </Row>
+                    ) : (
+                        <>
+                        <Row>
+                            <Col xs={1}></Col>
+                            <Col xs={10}>
+                            <InputText 
+                                    className={'inputBasicDesign'}
+                                    type={'text'}
+                                    name={'name'}
+                                    placeholder={'CORINA'}
+                                    required={true}
+                                    error={errorInputField.nameError}
+                                    changeFunction={(e)=>inputHandler(e)}
+                                    blurFunction={(e)=>checkError(e)}
+                                    />
+                            </Col>
+                            <Col xs={1}></Col>
+                        </Row>
+                        <Row>
+                            <Col xs={1}></Col>
+                            <Col xs={10}>
+                            <InputText 
+                                    className={'inputBasicDesign'}
+                                    type={'text'}
+                                    name={'surname'}
+                                    placeholder={'Ciorpac'}
+                                    required={true}
+                                    error={errorInputField.surnameError}
+                                    changeFunction={(e)=>inputHandler(e)}
+                                    blurFunction={(e)=>checkError(e)}
+                                    />
+                            </Col>
+                            <Col xs={1}></Col>
+                        </Row>
+                        <Row>
+                            <Col xs={1}></Col>
+                            <Col xs={10}>
+                            <InputText 
+                                    className={'inputBasicDesign'}
+                                    type={'text'}
+                                    name={'DNI'}
+                                    placeholder={'00000000A'}
+                                    required={true}
+                                    error={errorInputField.DNIError}
+                                    changeFunction={(e)=>inputHandler(e)}
+                                    blurFunction={(e)=>checkError(e)}
+                                    />
+                            </Col>
+                            <Col xs={1}></Col>
+                        </Row>
+                        <Row>
+                            <Col xs={1}></Col>
+                            <Col xs={10}>
+                            <InputText
+                                    className={'inputBasicDesign'}
+                                    type={'text'}
+                                    name={'phone_number'}
+                                    placeholder={'+34 666 223 859'}
+                                    required={true}
+                                    error={errorInputField.phone_numberError}
+                                    changeFunction={(e)=>inputHandler(e)}
+                                    blurFunction={(e)=>checkError(e)}
+                                />
+                            </Col>
+                            <Col xs={1}></Col>
+                        </Row>
+                        <Row>
+                            <Col xs={1}></Col>
+                            <Col xs={10}>
+                            <InputText
+                                    className={'inputBasicDesign'}
+                                    type={'number'}
+                                    name={'post_code'}
+                                    placeholder={'46185'}
+                                    required={true}
+                                    error={errorInputField.post_codeError}
+                                    changeFunction={(e)=>inputHandler(e)}
+                                    blurFunction={(e)=>checkError(e)}
+                                />
+                            </Col>
+                            <Col xs={1}></Col>
+                        </Row>
+                        <Row>
+                            <Col xs={1}></Col>
+                            <Col xs={10}>
+                            <InputText 
+                                    className={'inputBasicDesign'}
+                                    type={'date'}
+                                    name={'birth'}
+                                    placeholder={'yyyy-mm-dd'}
+                                    required={true}
+                                    error={errorInputField.birthError}
+                                    changeFunction={(e)=>inputHandler(e)}
+                                    blurFunction={(e)=>checkError(e)}
+                                    />
+                            </Col>
+                            <Col xs={1}></Col>
+                        </Row>
+                        <Row>
+                            <Col xs={1}></Col>
+                            <Col xs={10}>
+                            <InputText
+                                    className={'inputBasicDesign'}
+                                    type={'text'}
+                                    name={'allergy'}
+                                    placeholder={'allergy'}
+                                    required={false}
+                                    error={errorInputField.allergyError}
+                                    changeFunction={(e)=>inputHandler(e)}
+                                    blurFunction={(e)=>checkError(e)}
+                                />
+                            </Col>
+                            <Col xs={1}></Col>
+                        </Row>
+                     
+                        <Row>
+                            <Col xs={4}></Col>
+                            <Col xs={4}>
+                                <ButtonSubmit 
+                                    className={
+                                        submitActive ? 'submitDesignPassive submitDesignActive textFormat' : 'submitDesignPassive'
+                                    } 
+                                    buttonName={'New Patient'}
+                                    clickFunction={
+                                        submitActive ? () => newPatientCreation() : () => {}
+                                    }
+                                    />
+                            </Col>
+                            <Col xs={4}></Col>
+                        </Row>
+                        </>
+                    )
+                }
+                
+            </Container>
+        );
+    };
