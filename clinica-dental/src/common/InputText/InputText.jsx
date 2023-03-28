@@ -18,7 +18,7 @@ export const InputText = ({
                 placeholder={placeholder}
                 required={required}
                 onBlur={(e) => validateFunction(e)}  
-                onChange = {(e) => changeFunction(e) }  
+                onChange = {(e) => changeFunction(e)}  
             />
          </>
      )

@@ -328,6 +328,7 @@ useEffect(()=>{
     //Si tenemos token, lo vamos a decodificar....
 
     const decodificado = decodeToken(dataRdx.credentials.token);
+    console.log(decodificado)
 
     if(decodificado?.roleId == 2){
       setIsAdmin(true);
@@ -407,6 +408,12 @@ useEffect(()=>{
             >
               Logout
             </Nav>
+            <Nav
+              onClick={() => navigate("/appoinments")}
+              className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
+            >
+              Crear cita
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -447,6 +454,12 @@ useEffect(()=>{
             >
               About Us
             </Nav>
+            <Nav
+              onClick={() => navigate("/appointments")}
+              className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
+            >
+              Crear cita
+            </Nav>
 
             <Nav
               onClick={() => navigate("/login")}
@@ -459,6 +472,12 @@ useEffect(()=>{
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
             >
               Register
+            </Nav>
+            <Nav
+              onClick={() => navigate("/appointments")}
+              className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
+            >
+              Crear cita
             </Nav>
           </Navbar.Collapse>
         </Container>

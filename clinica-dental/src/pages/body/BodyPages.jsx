@@ -15,6 +15,7 @@ import { Patient } from '../ProfilePatient/ProfilePatient';
 
 import { Register } from '../register/RegisterPage';
 import {Admin} from '../../pages/admin/Admin'
+import { CreatePatient } from '../appointments/AppointmentsPage';
 
 
 export const BodyPages =() =>{
@@ -29,7 +30,7 @@ export const BodyPages =() =>{
       <Route  path ="/login" element={<Login/>} />
       <Route  path ="/register" element={<Register />} />
       <Route  path ="/Patient" element={<Patient/>} />
-      {/* <Route  path ="/Logout" element={<Logout/>} />   */}
+      <Route  path ="/appointments" element={<CreatePatient/>} />   
       <Route  path ="/appointmentDoctor" element={<DoctorAppointments/>} />
       <Route  path ="/admin" element={<Admin/>} /> 
       {/* <Route path = "/users" element={<Users />}/>  */}
