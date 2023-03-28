@@ -11,7 +11,6 @@ import { DoctorAppointments } from '../AppointmentDoctores/AppointmentDoctores';
 
 import { HomePage } from '../home/HomePage'
 import { Login } from '../login/LoginPage';
-import { Profile } from '../Profile/Profile';
 import { Patient } from '../ProfilePatient/ProfilePatient';
 
 import { Register } from '../register/RegisterPage';
@@ -29,7 +28,6 @@ export const BodyPages =() =>{
       <Route  path ="/" element={<HomePage/>} />
       <Route  path ="/login" element={<Login/>} />
       <Route  path ="/register" element={<Register />} />
-      <Route  path ="/profile" element={<Profile/>} />
       <Route  path ="/Patient" element={<Patient/>} />
       {/* <Route  path ="/Logout" element={<Logout/>} />   */}
       <Route  path ="/appointmentDoctor" element={<DoctorAppointments/>} />

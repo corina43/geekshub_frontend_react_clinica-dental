@@ -72,6 +72,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getDoctorAppointment } from '../../services/apiCalls';
 import {appointmentData ,edit} from '../../containers/User/AppointmentSlice';
 import { userData } from '../../containers/User/userSlice';
+
 export  const DoctorAppointments = () => {
   const dispatch = useDispatch();
   const appointment = useSelector(appointmentData);
@@ -103,7 +104,7 @@ export  const DoctorAppointments = () => {
           )} */}
 
       {/* appointment.appointment.data.data[0].Appointments[0] */}
-      {appointment.appointment.data.data[0].Appointments && (
+      {appointment?.appointment?.data.data[0]?.Appointments && (
         <>
           {appointment.appointment.data.data[0].Appointments.map(data => 
             {

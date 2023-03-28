@@ -82,10 +82,10 @@
 //               Admin
 //             </Nav> 
 //             <Nav
-//               onClick={() => navigate("/about")}
+//               onClick={() => navigate("/appointments")}
 //               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
 //             >
-//               About Us
+//               Appointment
 //             </Nav>
 
 //             <Nav
@@ -228,6 +228,12 @@
 //             >
 //               Register
 //             </Nav>
+//             <Nav
+//               onClick={() => logMeOut()}
+//               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
+//             >
+//               Logout
+//             </Nav>
 //           </Navbar.Collapse>
 //         </Container>
 //       </Navbar>
@@ -268,6 +274,12 @@
 //             >
 //               Register
 //             </Nav>
+//             <Nav
+//               onClick={() => logMeOut()}
+//               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
+//             >
+//               Logout
+//             </Nav>
 //           </Navbar.Collapse>
 //         </Container>
 //       </Navbar>
@@ -275,6 +287,11 @@
 
 //   }
 // };
+
+
+
+
+
 
 
 import React, { useState, useEffect } from "react";
@@ -343,24 +360,24 @@ useEffect(()=>{
               AppointmentDoctor
             </Nav>
 
-            <Nav
+            {/* <Nav
               onClick={() => navigate("/profile")}
               className="fw-bold m-auto text-center linkDesign"
             >
               Profile
-            </Nav>
+            </Nav> */}
             <Nav
               onClick={() => navigate("/patient")}
               className="fw-bold m-auto text-center linkDesign"
             >
               Patient
             </Nav>
-             <Nav
+              <Nav
               onClick={() => navigate("/admin")}
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
             >
               Admin
-            </Nav> 
+            </Nav>  
             <Nav
               onClick={() => navigate("/about")}
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
@@ -417,12 +434,12 @@ useEffect(()=>{
             >
               Appointment
             </Nav>
-            <Nav
+            {/* <Nav
               onClick={() => navigate("/profile")}
               className="fw-bold m-auto text-center linkDesign"
             >
               Profile
-            </Nav>
+            </Nav> */}
 
             <Nav
               onClick={() => navigate("/about")}

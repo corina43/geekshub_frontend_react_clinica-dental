@@ -2,6 +2,7 @@
 import {  BodyPages } from "./pages/body/BodyPages";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header } from "./common/Header/Header";
+// import { Header } from "./common/Header/Header";
 
 
 
