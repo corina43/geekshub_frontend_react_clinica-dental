@@ -6,9 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { userData } from '../../containers/User/userSlice';
 // apicall
 import { createPatient } from '../../services/apiCalls';
-//helper
-import { validate } from '../../common/helpers/useful';
-//render
+import { validate } from '../../common/helpers/useful'
 import { InputText } from '../../common/InputText/InputText';
 import { ButtonSubmit } from '../../common/ButtonSubmit/ButtonSubmit';
 import Container from 'react-bootstrap/Container';
@@ -96,7 +94,7 @@ export const CreatePatient = () => {
             };
         };
 
-        //in case that a field is not valid
+        //en el caso no sea valido
         for(let valid in validInputField){
             
             if(validInputField[valid] === false){
@@ -106,7 +104,7 @@ export const CreatePatient = () => {
             };
         };
     
-        //in case the data is fully validated
+      
         setSubmitActive(true);
     }, [errorInputField, validInputField]);
 
@@ -141,17 +139,18 @@ export const CreatePatient = () => {
         );
     };
 
-    // create new patient function
+ 
     // función para crear nuevo paciente
 const newPatientCreation = () => {
     createPatient(newPatient, dataRdx.credentials.token)
+    console.log(dataRdx)
         .then((backendCall) => {
             let backendData = {
                 message: backendCall.data.message
             };
             setUserMessage(backendData.message);
             setTimeout(() => {
-                navigate('/profile');
+                navigate('/patient');
             }, 2000);
         })
         .catch(error => console.log(error));

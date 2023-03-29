@@ -383,7 +383,7 @@ useEffect(()=>{
               onClick={() => navigate("/user")}
               className="fw-bold m-auto text-center linkDesign"
             >
-              User cita
+              Crear cita
             </Nav> 
             <Nav
               onClick={() => navigate("/about")}
@@ -418,7 +418,7 @@ useEffect(()=>{
               onClick={() => navigate("/appoinments")}
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
             >
-              Crear cita
+              Crear Pacientes
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -444,7 +444,7 @@ useEffect(()=>{
               onClick={() => navigate("/user")}
               className="fw-bold m-auto text-center linkDesign"
             >
-              Usercita
+              Crear cita
             </Nav>
             <Nav
               onClick={() => navigate("/appointmentDoctor")}
@@ -452,12 +452,12 @@ useEffect(()=>{
             >
               Appointment
             </Nav>
-            {/* <Nav
-              onClick={() => navigate("/profile")}
+            <Nav
+              onClick={() => navigate("/citas")}
               className="fw-bold m-auto text-center linkDesign"
             >
-              Profile
-            </Nav> */}
+              Citas
+            </Nav>
 
             <Nav
               onClick={() => navigate("/about")}
@@ -469,7 +469,7 @@ useEffect(()=>{
               onClick={() => navigate("/appointments")}
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
             >
-              Crear cita
+              Crear pacientes
             </Nav>
 
             <Nav
