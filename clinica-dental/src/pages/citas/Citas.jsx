@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const citas = () => {
+export const Citas = () => {
   return (
     <div>citas</div>
   )

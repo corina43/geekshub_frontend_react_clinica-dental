@@ -1,38 +1,42 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { userData } from "../../containers/User/userSlice";
 import { appointmentData, edit } from '../../containers/User/AppointmentSlice';
-import {getAllAppointment  } from "../../services/apiCalls";
+import { getPatientAppointment  } from "../../services/apiCalls";
 
-const AppointmentPatient = () => {
+
+
+export const AppointmentPatient = () => {
+
+
   const dispatch = useDispatch();
-//  const appointment = useSelector(appointmentData);
-//   const user = useSelector(userData);
+  const appointment = useSelector(appointmentData);
+  const user = useSelector(userData);
 
-  const [appointment, setAppointment] = useState([]);
-  const dataRdx = useSelector(userData);
+
 
   useEffect(() => {
-    if (dataRdx?.credentials?.token) {
-        getAllAppointment(dataRdx?.credentials?.token)
-        .then((result) => {
-          console.log(result.data);
-          setAppointment(result.data);
+    if (user?.credentials?.token) {
+      getPatientAppointment(user?.credentials?.token)
+      
+        .then((message) => {
+          dispatch(edit({appointment: message}))
+          console.log(result.getPatientAppointment);
+     
         })
         .catch((error) => console.log(error));
     }
-  }, [dataRdx]);
+  }, [dispatch, user]);
 
   return (
     <div>
       <h3>Citas Pendientes</h3>
-      {citas.length > 0 ? (
+      {appointment.length > 0 ? (
         <ul>
-          {citas.map((appointment) => (
-            <li key={appointment.id}>
-              <p>Fecha: {appointment.fecha}</p>
-              <p>Hora: {appointment.hora}</p>
-              <p>Doctor: {appointment.doctor}</p>
+          {appointment.map((data) => (
+            <li key={data.id}>
+              <p>Fecha: {data.data_time}</p>
+              <p>Doctor: {data.doctor}</p>
             
             </li>
           ))}

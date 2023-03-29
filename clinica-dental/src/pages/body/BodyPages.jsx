@@ -15,9 +15,10 @@ import { Patient } from '../ProfilePatient/ProfilePatient';
 
 
 import {Admin} from '../../pages/admin/Admin'
-import { CreatePatient } from '../appointments/AppointmentsPage';
+import { CreatePatient } from '../appointments/CreatePatient';
 import { Register } from '../register/RegisterPage';
 import { UserCreateAppointment } from '../user/UserAppointment';
+import { AppointmentPatient } from '../AppointmentPatient/AppointmentPatient';
 
 
 export const BodyPages =() =>{
@@ -35,7 +36,8 @@ export const BodyPages =() =>{
       <Route  path ="/appointments" element={<CreatePatient/>} />   
       <Route  path ="/appointmentDoctor" element={<DoctorAppointments/>} />
       <Route  path ="/admin" element={<Admin/>} /> 
-      <Route path = "/user" element={<UserCreateAppointment />}/>
+      <Route path = "/user" element={<UserCreateAppointment />}/> 
+      <Route path = "/AppointmentPatient" element={<AppointmentPatient/>}/>
        {/* <Route  path ="/Citas" element={<Citas/>} />  */}
       <Route  path ="*" element={<HomePage/>}/> 
      
