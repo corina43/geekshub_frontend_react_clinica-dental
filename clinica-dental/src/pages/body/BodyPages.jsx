@@ -13,9 +13,11 @@ import { HomePage } from '../home/HomePage'
 import { Login } from '../login/LoginPage';
 import { Patient } from '../ProfilePatient/ProfilePatient';
 
-import { Register } from '../register/RegisterPage';
+
 import {Admin} from '../../pages/admin/Admin'
 import { CreatePatient } from '../appointments/AppointmentsPage';
+import { Register } from '../register/RegisterPage';
+import { UserCreateAppointment } from '../user/UserAppointment';
 
 
 export const BodyPages =() =>{
@@ -33,7 +35,7 @@ export const BodyPages =() =>{
       <Route  path ="/appointments" element={<CreatePatient/>} />   
       <Route  path ="/appointmentDoctor" element={<DoctorAppointments/>} />
       <Route  path ="/admin" element={<Admin/>} /> 
-      {/* <Route path = "/users" element={<Users />}/>  */}
+       <Route path = "/user" element={<UserCreateAppointment />}/>  
       <Route  path ="*" element={<HomePage/>}/> 
      
      

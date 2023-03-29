@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { InputText } from "../../common/InputText/InputText";
 import { logMe } from "../../services/apiCalls";
 import "./Login.css";
 

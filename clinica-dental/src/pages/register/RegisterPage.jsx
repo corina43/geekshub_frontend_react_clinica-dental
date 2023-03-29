@@ -3,6 +3,7 @@ import { InputText } from "../../common/InputText/InputText";
 import { validate } from "../../common/helpers/useful";
 import{createUserProfile} from  '../../services/apiCalls'
 import { useNavigate } from "react-router-dom";
+import './Register.css'
 
 
 
@@ -180,3 +181,5 @@ return (
 );
     }
   
+
+

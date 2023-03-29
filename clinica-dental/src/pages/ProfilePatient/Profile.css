@@ -1,0 +1,32 @@
+.profile{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-top: 70px;
+}
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cardsContainer > div {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+  }
+  
+  .cardsContainer > div:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+  
+  .cardsContainer > div > div {
+    margin-top: 10px;
+  }
+  

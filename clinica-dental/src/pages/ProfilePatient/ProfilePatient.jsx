@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { userData } from '../../containers/User/userSlice';
 import { getPatientInfo } from '../../services/apiCalls';
 import { ProgressBar } from 'react-bootstrap';
+import './Profile.css'
 
 export const Patient = () => {
     const [patients, setPatients] = useState([]);
@@ -30,7 +31,7 @@ export const Patient = () => {
         <>
 
             <div>
-                <h6>my profile:</h6>
+                <h6 className='profile'>my profile:</h6>
                 
                 {patients.length > 0 ? (
                     <div className="cardsContainer">

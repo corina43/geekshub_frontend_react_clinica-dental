@@ -84,7 +84,7 @@ export const getAllUser = async (token) => {
 
 
 export const createAppointment = async (body, token) => {
-
+ console.log(token);
   let config = {
       headers: {
           'Authorization': 'Bearer '+ token,  
@@ -105,4 +105,23 @@ export const createPatient = async (body, token) => {
   return await axios.post(`${root}/patient/new`, body, config)
 
 };
+export const getPatientAppointment = async (token) => {
 
+  let config = {
+      headers: {
+          'Authorization': 'Bearer '+ token,  
+      }
+  }
+
+  return await axios.get(`${root}/patient/appointment/`, config)
+};
+export const getDoctorData = async (token) => {
+
+  let config = {
+      headers: {
+          'Authorization': 'Bearer '+ token,  
+      }
+  }
+
+  return await axios.get(`${root}/user/doctor-info`, config);
+};

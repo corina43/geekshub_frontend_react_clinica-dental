@@ -17,7 +17,7 @@ import Col from 'react-bootstrap/Col';
 
 export const CreatePatient = () => {
 
-    const userRdx = useSelector(userData);
+    const dataRdx = useSelector(userData);
     
     const navigate = useNavigate();
 
@@ -144,7 +144,7 @@ export const CreatePatient = () => {
     // create new patient function
     // función para crear nuevo paciente
 const newPatientCreation = () => {
-    createPatient(newPatient, userRdx.userCredentials.token)
+    createPatient(newPatient, dataRdx.credentials.token)
         .then((backendCall) => {
             let backendData = {
                 message: backendCall.data.message

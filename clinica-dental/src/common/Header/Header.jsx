@@ -378,7 +378,13 @@ useEffect(()=>{
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
             >
               Admin
-            </Nav>  
+            </Nav>
+            <Nav
+              onClick={() => navigate("/user")}
+              className="fw-bold m-auto text-center linkDesign"
+            >
+              User cita
+            </Nav> 
             <Nav
               onClick={() => navigate("/about")}
               className="fw-bold mx-auto mt-1 mb-md-1 text-center linkDesign"
@@ -434,7 +440,12 @@ useEffect(()=>{
             >
               Home
             </Nav>
-          
+            <Nav
+              onClick={() => navigate("/user")}
+              className="fw-bold m-auto text-center linkDesign"
+            >
+              Usercita
+            </Nav>
             <Nav
               onClick={() => navigate("/appointmentDoctor")}
               className="fw-bold m-auto text-center linkDesign"
