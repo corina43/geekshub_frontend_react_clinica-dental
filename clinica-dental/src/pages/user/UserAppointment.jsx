@@ -59,7 +59,7 @@ const [newAppointment, setNewAppointment] = useState(
         createAppointment(newAppointment, dataRdx.credentials.token)
         .then((backendCall) => {
             setNewAppointment(backendCall.data);
-            setTimeout(() => {navigate('/citas')}, 2000)
+            setTimeout(() => {navigate('/AppointmentPatient')}, 3000)
         })
         .catch(error => console.log(error));
     };

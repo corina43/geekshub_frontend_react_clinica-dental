@@ -39,7 +39,7 @@ export const BodyPages =() =>{
       <Route  path ="/admin" element={<Admin/>} /> 
       <Route path = "/user" element={<UserCreateAppointment />}/> 
       <Route path = "/AppointmentPatient" element={<AppointmentPatient/>}/>
-       <Route  path ="/Citas" element={<Citas />} /> 
+      <Route  path ="/Citas" element={<Citas />} /> 
       <Route  path ="*" element={<HomePage/>}/> 
      
      

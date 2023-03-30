@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDoctorAppointment } from '../../services/apiCalls';
 import { appointmentData, edit } from '../../containers/User/AppointmentSlice';
@@ -7,27 +7,24 @@ import { userData } from '../../containers/User/userSlice';
 import './DoctorAppointments.css';
 
 export const DoctorAppointments = () => {
-  const dispatch = useDispatch();
-  const appointment = useSelector(appointmentData);
+  const [appointment, setAppointment] =useState([])
   const user = useSelector(userData);
 
   useEffect(() => {
-    if (user?.credentials?.token) {
+    if (appointment.length === 0) {
       getDoctorAppointment(user.credentials.token)
         .then((message) => {
-          dispatch(edit({ appointment: message }));
+          setAppointment(message.data.data[0].Appointments)
         })
         .catch((error) => console.log(error));
     }
-  }, [dispatch, user]);
-
+  }, [appointment]);
   return (
     <div className="appointments-container">
       <h1 className="appointments-title">Lista de citas de los doctores</h1>
-
-      {appointment?.appointment?.data.data[0]?.Appointments ? (
+      {appointment ? (
         <>
-          {appointment.appointment.data.data[0].Appointments.map((data) => (
+          {appointment.map((data) => (
             <div className="appointment" key={data.id}>
               <p>Fecha y hora: {data.date_time}</p>
               <div>{data?.Patient?.name}</div>

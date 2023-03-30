@@ -25,12 +25,12 @@ export const Login = () => {
 
   const [welcome, setWelcome] = useState("");
 
-  useEffect(() => {
-    if (credentialsRdx?.credentials?.token) {
-      //Si No token...home redirect
-      navigate("/");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (credentialsRdx?.credentials?.token) {
+  //     //Si No token...home redirect
+  //     navigate("/");
+  //   }
+  // }, []);
 
   const inputHandler = (e) => {
     setCredenciales((prevState) => ({
