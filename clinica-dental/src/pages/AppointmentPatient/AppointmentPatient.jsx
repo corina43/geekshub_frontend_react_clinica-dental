@@ -17,11 +17,14 @@ export const AppointmentPatient = () => {
 
   useEffect(() => {
     if (user?.credentials?.token) {
-      getPatientAppointment(user?.credentials?.token)
-      
+      getPatientAppointment(user.credentials.token)
+    
         .then((message) => {
+          console.log(message);
           dispatch(edit({appointment: message}))
-          console.log(result.getPatientAppointment);
+          console.log(user.credentials.token);
+          // console.log(getPatientAppointment);
+          // console.log(message.getPatientAppointment);
      
         })
         .catch((error) => console.log(error));
@@ -29,23 +32,23 @@ export const AppointmentPatient = () => {
   }, [dispatch, user]);
 
   return (
-    <div>
-      <h3>Citas Pendientes</h3>
-      {appointment.length > 0 ? (
-        <ul>
-          {appointment.map((data) => (
-            <li key={data.id}>
-              <p>Fecha: {data.data_time}</p>
-              <p>Doctor: {data.doctor}</p>
-            
-            </li>
+    <div className="appointmentsPatient-container">
+      <h3 className="appointments-title">Citas Pendientes</h3>
+    
+{appointment?.appointment?.data.data[0]?.Appointments ? (
+        <>
+          {appointment.appointment.data.data[0].Appointments.map((data) => (
+            <div className="appointment" key={data.id}>
+              <p>Fecha y hora: {data.date_time}</p>
+              <div>{data?.Patient?.name}</div>
+              
+             
+            </div>
           ))}
-        </ul>
+        </>
       ) : (
-        <p>No tiene citas pendientes</p>
+        <p>No tienes citas .</p>
       )}
     </div>
   );
 };
-
-

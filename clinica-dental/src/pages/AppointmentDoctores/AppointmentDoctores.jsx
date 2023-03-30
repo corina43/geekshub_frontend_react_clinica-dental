@@ -30,6 +30,8 @@ export const DoctorAppointments = () => {
           {appointment.appointment.data.data[0].Appointments.map((data) => (
             <div className="appointment" key={data.id}>
               <p>Fecha y hora: {data.date_time}</p>
+              <div>{data?.Patient?.name}</div>
+              
               {/* <p>Nombre del paciente: {data.patient.userName}</p> */}
               {/* <p>Apellidos del paciente: {data.patient.surname}</p> */}
               {/* <p>DNI del paciente: {data.data.patient.DNI}</p>  */}

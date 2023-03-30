@@ -1,6 +1,5 @@
 import React, { useState, useEffect  } from 'react';
 import { useNavigate } from 'react-router-dom';
-//apicall
 import { createAppointment } from '../../services/apiCalls';
 import { useSelector } from 'react-redux';
 import { userData } from '../../containers/User/userSlice';
@@ -22,7 +21,7 @@ export const UserCreateAppointment = () => {
     const [newDoctor, setNewDoctor] = useState(
         [{
         id: 1,
-        doctorName: "Doctora Corina"
+        doctorName: "Doctora Noa Miralles"
     },
         {
         id: 2,
@@ -60,7 +59,7 @@ const [newAppointment, setNewAppointment] = useState(
         createAppointment(newAppointment, dataRdx.credentials.token)
         .then((backendCall) => {
             setNewAppointment(backendCall.data);
-            setTimeout(() => {navigate('/patient')}, 2000)
+            setTimeout(() => {navigate('/citas')}, 2000)
         })
         .catch(error => console.log(error));
     };
