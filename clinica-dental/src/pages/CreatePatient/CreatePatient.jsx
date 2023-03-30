@@ -12,6 +12,7 @@ import { ButtonSubmit } from '../../common/ButtonSubmit/ButtonSubmit';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Button } from 'react-bootstrap';
 
 export const CreatePatient = () => {
 
@@ -26,11 +27,12 @@ export const CreatePatient = () => {
             name: "",
             surname: "",
             DNI: "",
+            user_id: dataRdx.credentials.usuario.userId,
             phone_number: "",
             post_code: "",
             birth: "",
-            allergy: "",
-            surgery: ""
+            allergy: "blanqueamiento",
+            surgery: "blanqueamiento"
         }
     );
 
@@ -141,20 +143,19 @@ export const CreatePatient = () => {
 
  
     // función para crear nuevo paciente
+
 const newPatientCreation = () => {
+
     createPatient(newPatient, dataRdx.credentials.token)
-    console.log(dataRdx)
-        .then((backendCall) => {
-            let backendData = {
-                message: backendCall.data.message
-            };
-            setUserMessage(backendData.message);
-            setTimeout(() => {
-                navigate('/patient');
-            }, 2000);
-        })
-        .catch(error => console.log(error));
+    .then((backendCall) => {
+        setNewPatient(backendCall.data);
+    })
+    .catch(error => console.log(error));
 };
+
+console.log(newPatient, "patient")
+console.log(validInputField, "validation")
+
 return (
             <Container>
                 {
@@ -284,15 +285,7 @@ return (
                         <Row>
                             <Col xs={4}></Col>
                             <Col xs={4}>
-                                <ButtonSubmit 
-                                    className={
-                                        submitActive ? 'submitDesignPassive submitDesignActive textFormat' : 'submitDesignPassive'
-                                    } 
-                                    buttonName={'New Patient'}
-                                    clickFunction={
-                                        submitActive ? () => newPatientCreation() : () => {}
-                                    }
-                                    />
+                                <Button onClick={newPatientCreation}></Button>t
                             </Col>
                             <Col xs={4}></Col>
                         </Row>

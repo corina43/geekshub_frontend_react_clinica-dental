@@ -322,6 +322,7 @@ const navigate = useNavigate()
                     <Nav.Link as={Link} to='/AppointmentPatient'>Tus citas</Nav.Link>
                     <Nav.Link as={Link} to='/user'>Crear cita</Nav.Link>
                     <Nav.Link as={Link} to='/' onClick={() => logout()}>Logout</Nav.Link>
+                    <Nav.Link as={Link} to='/createpatient'>Crear paciente</Nav.Link>
                     </>
                     ) : dataRdx?.credentials?.usuario?.roleId === 1 ? (
                     <>
@@ -329,7 +330,7 @@ const navigate = useNavigate()
                     <Nav.Link as={Link} to='/patient'>Profile</Nav.Link>
                     <Nav.Link as={Link} to='/about'>About us</Nav.Link>
                     <Nav.Link as={Link} to='/user'>Crear citas</Nav.Link>
-                    <Nav.Link as={Link} to='/appointmentDoctor'>citas</Nav.Link>
+                    <Nav.Link as={Link} to='/appointmentDoctor'>Citas</Nav.Link>
                     <Nav.Link as={Link} to='/' onClick={() => logout()}>Logout</Nav.Link>
                     </>
                     ) : dataRdx?.credentials?.usuario?.roleId === 2 ? (

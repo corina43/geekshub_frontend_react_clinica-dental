@@ -102,7 +102,7 @@ export const createPatient = async (body, token) => {
       }
   }
 
-  return await axios.post(`${root}/patient/new`, body, config)
+  return await axios.put(`${root}/patient/new`, body, config)
 
 };
 export const getPatientAppointment = async (token) => {

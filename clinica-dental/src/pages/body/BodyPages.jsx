@@ -20,6 +20,7 @@ import { Register } from '../register/RegisterPage';
 import { UserCreateAppointment } from '../user/UserAppointment';
 import { AppointmentPatient } from '../AppointmentPatient/AppointmentPatient';
 import { Citas } from '../citas/citas';
+import { CreatePatient } from '../CreatePatient/CreatePatient';
 
 
 export const BodyPages =() =>{
@@ -34,7 +35,7 @@ export const BodyPages =() =>{
       <Route  path ="/login" element={<Login/>} />
       <Route  path ="/register" element={<Register />} />
       <Route  path ="/Patient" element={<Patient/>} />
-      {/* <Route  path ="/appointments" element={<CreatePatient/>} />    */}
+      <Route  path ="/createpatient" element={<CreatePatient/>} />  
       <Route  path ="/appointmentDoctor" element={<DoctorAppointments/>} />
       <Route  path ="/admin" element={<Admin/>} /> 
       <Route path = "/user" element={<UserCreateAppointment />}/> 
