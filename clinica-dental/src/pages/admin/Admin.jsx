@@ -6,8 +6,12 @@ import { useDispatch ,useSelector } from 'react-redux';
 import { userData } from '../../containers/User/userSlice';
 import { adminData } from '../../containers/User/isAdminSlice';
 import { getAllUser } from '../../services/apiCalls';
+import './Admin.css'
+import { Col } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+// import CardDeck from 'react-bootstrap/CardDeck';
+import Row from 'react-bootstrap/Row';
 
-//render
 
 export const Admin = () => {
 
@@ -43,17 +47,22 @@ console.log(users, "sou users")
 
 <div className="usersDesign">
   <h3>Usuarios existentes:</h3>
-      {users.length > 0 ? (
-        <div>
+     {users.length > 0 ? (
+        <Row xs={1} md={2} lg={5}>
           {users.map((data) => {
             return (
-              <div key={data.id}>
-                <p>Nombre: {data.user_name}</p>
-                <p>Email: {data.email}</p>
-              </div>
+              <Col key={data.id}>
+                <Card className="my-3">
+          <Card.Body>
+            <Card.Title>{data.user_name}</Card.Title>
+            <Card.Text>{data.email}</Card.Text>
+          </Card.Body>
+        </Card>
+               
+                 </Col>
             );
           })}
-        </div>
+        </Row>
       ) : (
         
         <div>ESTAN VINIENDO</div>
