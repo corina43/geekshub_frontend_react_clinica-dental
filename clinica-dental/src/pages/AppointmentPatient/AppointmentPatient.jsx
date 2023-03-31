@@ -20,9 +20,8 @@ export const AppointmentPatient = () => {
       getPatientAppointment(user.credentials.token)
     
         .then((message) => {
-          console.log(message);
           dispatch(edit({appointment: message}))
-          console.log(user.credentials.token);
+          // console.log(user.credentials.token);
           // console.log(getPatientAppointment);
           // console.log(message.getPatientAppointment);
      
@@ -35,7 +34,7 @@ export const AppointmentPatient = () => {
     <div className="appointmentsPatient-container">
       <h3 className="appointments-title">Citas Pendientes</h3>
     
-{appointment?.appointment?.data.data[0]?.Appointments ? (
+{appointment?.appointment?.data?.data[0]?.Appointments ? (
         <>
           {appointment.appointment.data.data[0].Appointments.map((data) => (
             <div className="appointment" key={data.id}>
