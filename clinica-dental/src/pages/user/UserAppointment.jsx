@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Button, Form } from 'react-bootstrap';
-
+import './UserAppointment.css';
 
 export const UserCreateAppointment = () => {
     
@@ -53,12 +53,13 @@ const [newAppointment, setNewAppointment] = useState(
     // FUNCTIONS 
 
     const checkError = (e) => { };
-
+    const [successMessage, setSuccessMessage] = useState("");
     const createNewAppointment = () => {
 
         createAppointment(newAppointment, dataRdx.credentials.token)
         .then((backendCall) => {
             setNewAppointment(backendCall.data);
+            setSuccessMessage("¡Cita creada con éxito!");
             setTimeout(() => {navigate('/AppointmentPatient')}, 3000)
         })
         .catch(error => console.log(error));
@@ -105,7 +106,9 @@ const [newAppointment, setNewAppointment] = useState(
                                 <Button onClick={createNewAppointment} >
                                     Crear Cita
                                 </Button>
+
                             <Col xs={3}></Col>
+                            {successMessage && <p>{successMessage}</p>}
                         </Row>
                         </Form>
                     </>
