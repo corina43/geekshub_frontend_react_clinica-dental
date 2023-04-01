@@ -1,5 +1,6 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import logo_img from "../images/logo.png";
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { userData, userout } from '../../containers/User/userSlice';
@@ -18,7 +19,9 @@ const navigate = useNavigate()
   return (
     <>
     <Navbar expand="lg" className='navBar'>
-    {/* <Image src={img} className="imgNavBar"/> */}
+        <div className="logo">
+    <img src={logo_img} alt="om dental clinic logo" />
+    </div>
     <Navbar.Brand as={Link} to={'/home'} className='titleNavBar'>Noa Miralles Dental Care</Navbar.Brand>
         <div className='navbar'>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

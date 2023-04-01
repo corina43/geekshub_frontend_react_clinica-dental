@@ -1,8 +1,7 @@
 import React from "react";
 import "./About.css"
 import about_img from "../../common/images/about_img.webp";
-// import { Link } from "react-router-dom";
-// import about_long_des_data from "./PagesData/AboutData";
+
 const About = () => {
   return (
     <>

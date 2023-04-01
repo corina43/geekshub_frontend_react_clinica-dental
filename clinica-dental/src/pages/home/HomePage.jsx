@@ -10,7 +10,9 @@ import './Home.css'
   return (
   
   <section id="home">
+   
   <Container fluid>
+ 
   <Row>
   <Col>
   <div className="slider_container">
@@ -42,22 +44,12 @@ import './Home.css'
                   </p>
                   <div className="social_links"></div>
                 </div>
-                {/* <div className="slider_controls">
-                  <div className="circle_dot_class">
-                    <span></span>
-                  </div>
-                  <div className="circle_dot_class">
-                    <span></span>
-                  </div>
-                  <div className="circle_dot_class">
-                    <span></span>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
         </Col>
       </Row>
+    
     </Container>
 
     <Container>
@@ -98,7 +90,7 @@ import './Home.css'
           </div>
         </Col>
       </Row>
-    </Container>
+     </Container>
   </section>
 
   )};

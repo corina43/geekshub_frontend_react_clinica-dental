@@ -1,26 +1,28 @@
+
 import React from "react";
 import './Footer.css'
-const contact_link = [
+import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+
+
+ const contact_link = [
   {
     index: 1,
-    img: <i className="fab fa-facebook-f"></i>,
+    icon: <FaFacebook />,
     on_link: "https://www.facebook.com/",
   },
   {
     index: 2,
-    img: <i className="fab fa-instagram"></i>,
+    icon: <FaInstagram />,
     on_link: "https://www.instagram.com/",
   },
   {
     index: 3,
-    // img: <i className="fab fa-twitter"></i>,
-    
+    icon: <FaTwitter />,
     on_link: "https://www.twitter.com/",
   },
-
 ];
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div className="footer_container">
       <div className="about_us">
@@ -40,12 +42,12 @@ const Footer = () => {
           <ul>
             <li>
               <a href="tel:123-456-7890">
-                <i className="fas fa-phone-alt"></i> 123-456-7890
+                <FaPhoneAlt /> 123-456-7890
               </a>
             </li>
             <li>
               <a href="mailto:info@dentalclinic.com">
-                <i className="far fa-envelope"></i> info@dentalclinic.com
+                <FaEnvelope /> info@dentalclinic.com
               </a>
             </li>
           </ul>
@@ -54,19 +56,23 @@ const Footer = () => {
       <div className="follow_us">
         <div className="wrapper_container_fu">
           <h2>Síguenos</h2>
-          {/* <ul>
+          <ul>
             {contact_link.map((contact) => (
               <li key={contact.index}>
                 <a href={contact.on_link} target="_blank" rel="noreferrer">
-                  {contact.img}
+                  {contact.icon}
                 </a>
               </li>
             ))}
-          </ul> */}
+          </ul>
         </div>
+        <div className="footer-bottom text-center">
+            <p className="text-xs-center mb-0">
+              &copy;{new Date().getFullYear()} City Guide App - All Rights
+              Reserved
+            </p>
+          </div>
       </div>
     </div>
   );
 };
-
-export default Footer;

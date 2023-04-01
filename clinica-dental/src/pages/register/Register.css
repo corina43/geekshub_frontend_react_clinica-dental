@@ -1,24 +1,4 @@
- /* .divContainerReg {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: rgb(14, 204, 211);
-
-    height: 100vh;
-    width: 100vw;
-} 
-.inputsBoxRegister{
-    height: 80vh;
-    width: 24em;    
-    
-
-    display: flex;
-    gap: 0.5em;
-    flex-direction: column;
-   
-} */
+ 
 .homeDesign {
     display: flex;
     flex-direction: column;

@@ -72,4 +72,13 @@
     width: 100%;
     max-width: 400px;
   }
-  
+
+.main-footer{
+  background-color: rgb(180, 214, 231);
+  position:relative;
+}
+.footer-size{
+  height:10em;
+  bottom:0px;
+  width:100%;
+} 

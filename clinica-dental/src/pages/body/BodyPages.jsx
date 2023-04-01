@@ -39,8 +39,8 @@ export const BodyPages =() =>{
       <Route  path ="/createpatient" element={<CreatePatient/>} />  
       <Route  path ="/appointmentDoctor" element={<DoctorAppointments/>} />
       <Route  path ="/admin" element={<Admin/>} /> 
-      <Route path = "/user" element={<UserCreateAppointment />}/> 
-      <Route path = "/AppointmentPatient" element={<AppointmentPatient/>}/>
+      <Route  path = "/user" element={<UserCreateAppointment />}/> 
+      <Route  path = "/AppointmentPatient" element={<AppointmentPatient/>}/>
       <Route  path ="/Citas" element={<Citas />} /> 
       <Route  path ="/about" element={<About/>}/> 
       <Route  path ="*" element={<HomePage/>}/> 
