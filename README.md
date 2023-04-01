@@ -30,7 +30,7 @@ El administrador es el último usuario que puede acceder a todos los datos perso
 
 ## Implementación 🚀
 <div align="center">
-    <a href="https://front.d3oymjwipxbla6.amplifyapp.com/"><strong>URL de producción</strong></a>🚀🚀🚀
+    <a href=""><strong>URL de producción</strong></a>🚀🚀🚀
 </div>
 
 ## Tecnologías
