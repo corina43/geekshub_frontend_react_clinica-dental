@@ -97,7 +97,66 @@ El administrador es el último usuario que puede acceder a todos los datos perso
     ` $ npm i `
  ·#Start server with:
    ``` $ npm run dev ```
+Last step download the dataBase:
+[Data base git hub](https://github.com/corina43/geekshubs-fsd-val-proyecto_4.1)
 
+## Como se ha realizado este proyecto
+Primero, se clonó el proyecto desde un repositorio remoto de Git y se instaló localmente en la computadora. Luego, se instalaron todas las dependencias necesarias a través de npm.
+
+Posteriormente, se configuraron los archivos de configuración para permitir la comunicación con el servidor backend, utilizando la biblioteca de JavaScript axios para simplificar la comunicación HTTP.
+
+A continuación, se trabajó en el diseño de la interfaz de usuario, utilizando Bootstrap React como marco de trabajo. Además, se agregaron algunos componentes personalizados y se diseñó el esquema de colores y estilos.
+
+Una vez que el diseño se completó, se comenzó a trabajar en la integración con el backend, creando funciones que llaman a las API del backend a través de axios. Se realizaron pruebas y ajustes para garantizar que la aplicación funcionara correctamente.
+
+Para la creación del frontend de la aplicación de la clínica dental, se implementaron diferentes vistas según el rol de los usuarios. Los pacientes pueden hacer login y logout, crear citas, ver sus citas y su perfil. También se creó una vista para los doctores, que pueden hacer login y logout, ver sus citas y su perfil. Además, se creó una vista para los administradores, que pueden hacer login y logout, ver todos los usuarios y su perfil. También se creó una vista de entrada a la página donde, si el usuario no está registrado, puede hacerlo y, según su rol que se autentifica mediante token, se le remite a la vista correspondiente. Todo esto se realizó renderizando los endpoints creados en el backend.
+<p aling="center"><img src="../clinica-dental/images/Screenshot_78.png"/></p>
+<p aling="center"><img src="../clinica-dental/images/Screenshot_79.png"/></p>
+<p aling="center"><img src="../clinica-dental/"/></p>
+
+## Bugs conocidos
+✅ Desajustes del footer en vista paciente al crear cita y profile. 
+⬜ No aparece el nombre del usuario logeado en el NavBar.
+⬜ Algunos desajustes de authentificacion provenientes del backend para darle funccionalidad a Crer Pacientes.  
+
+## Futuras funccionalidades
+✅ Crear pacientes.
+⬜ Crear doctores.
+⬜ Crear la funcionalidad para eliminar un usuario por parte del administrador.
+⬜ Ser capaz de eliminar y actualizar citas tanto por parte del usuario como del administrador.
+⬜ Modificar tanto una cita como el perfil por parte del usuario y administrador.
+
+## Licencia
+This project is belonging to license Creative Commons Legal Code.
+
+## Webgrafia:
+To achieve the goal we have collected information from:
+  [React documentation](https://www.reactjs.com/)
+  [React-bootstrap GeeksHubs](https://react-bootstrap.github.io/)
+
+
+## Agradecimientos:
+
+Agradezco a todos mis compañeros y especialmente a:
+
+  **Dani**  
+<a href="https://www.github.com/datata" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a> 
+
+  **Jose**
+<a href="https://github.com/JoseMarin" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
+
+  **Mara**
+<a href="https://www.github.com/MaraScampini" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=green" target="_blank"></a> 
+
+  **David**  
+<a href="https://github.com/Dave86dev" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=red" target="_blank"></a>
+
+
+## Contacto
+
+<a href = "mailto:micorreoelectronico@gmail.com"><img src="https://img.shields.io/badge/Gmail-C6362C?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/linkedinUser/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+</p>
 
 
 

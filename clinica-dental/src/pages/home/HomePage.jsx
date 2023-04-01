@@ -38,10 +38,6 @@ import './Home.css'
                   >
                     Cuidamos tu sonrisa
                   </h2>
-                  <p>
-                    Creemos que todos deberían tener fácil acceso a una gran
-                    clínica dental
-                  </p>
                   <div className="social_links"></div>
                 </div>
               </div>
