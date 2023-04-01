@@ -4,6 +4,7 @@ import "font-awesome/css/font-awesome.min.css";
 import slider_one from "../assets/slider_one.png";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import './Home.css'
 
  export const HomePage = () => {
   return (
@@ -41,7 +42,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
                   </p>
                   <div className="social_links"></div>
                 </div>
-                <div className="slider_controls">
+                {/* <div className="slider_controls">
                   <div className="circle_dot_class">
                     <span></span>
                   </div>
@@ -51,7 +52,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
                   <div className="circle_dot_class">
                     <span></span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

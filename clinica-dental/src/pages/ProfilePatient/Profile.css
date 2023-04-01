@@ -17,7 +17,7 @@
     border: 1px solid #cccccc;
     border-radius: 5px;
     text-align: center;
-    width: 200px;
+    width: 400px;
     height: 150px;
   }
   
@@ -29,4 +29,6 @@
   .cardsContainer > div > div {
     margin-top: 10px;
   }
+  
+
   

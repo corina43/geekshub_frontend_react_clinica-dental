@@ -15,6 +15,7 @@ export const Patient = () => {
     useEffect(() => {
         if(patients.length === 0){
             console.log(dataRdx?.credentials?.token)
+          
             getPatientInfo(dataRdx?.credentials?.token)
                 .then(
                     result => {
@@ -26,13 +27,16 @@ export const Patient = () => {
         };
     },[patients]);
     console.log(patients, "patient info")
+  
 
     return (
+      
         <>
-
+       
+        
             <div>
-                <h6 className='profile'>my profile:</h6>
-                
+                <h6 className='profile'>My profile:</h6>
+               
                 {patients.length > 0 ? (
                     <div className="cardsContainer">
                         {patients.map((data) => {

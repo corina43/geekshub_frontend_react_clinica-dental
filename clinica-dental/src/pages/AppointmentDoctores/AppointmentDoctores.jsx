@@ -26,15 +26,11 @@ export const DoctorAppointments = () => {
         <>
           {appointment.map((data) => (
             <div className="appointment" key={data.id}>
-              <p>Fecha y hora: {data.date_time}</p>
-              <div>{data?.Patient?.name}</div>
-              
-              {/* <p>Nombre del paciente: {data.patient.userName}</p> */}
-              {/* <p>Apellidos del paciente: {data.patient.surname}</p> */}
-              {/* <p>DNI del paciente: {data.data.patient.DNI}</p>  */}
+              <p className='datos'>Fecha y hora:<br/> {data.date_time}</p>
+              <div><p className='datos'>Paciente: {data?.Patient?.name}</p></div>
             </div>
           ))}
-        </>
+        </> 
       ) : (
         <p>No hay citas disponibles.</p>
       )}

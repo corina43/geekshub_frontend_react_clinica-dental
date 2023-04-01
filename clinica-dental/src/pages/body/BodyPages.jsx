@@ -21,6 +21,7 @@ import { UserCreateAppointment } from '../user/UserAppointment';
 import { AppointmentPatient } from '../AppointmentPatient/AppointmentPatient';
 import { Citas } from '../citas/citas';
 import { CreatePatient } from '../CreatePatient/CreatePatient';
+import About from '../about/About';
 
 
 export const BodyPages =() =>{
@@ -41,7 +42,9 @@ export const BodyPages =() =>{
       <Route path = "/user" element={<UserCreateAppointment />}/> 
       <Route path = "/AppointmentPatient" element={<AppointmentPatient/>}/>
       <Route  path ="/Citas" element={<Citas />} /> 
+      <Route  path ="/about" element={<About/>}/> 
       <Route  path ="*" element={<HomePage/>}/> 
+
      
      
    </Routes>

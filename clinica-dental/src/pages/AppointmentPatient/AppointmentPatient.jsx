@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { userData } from "../../containers/User/userSlice";
 import { appointmentData, edit } from '../../containers/User/AppointmentSlice';
 import { getPatientAppointment  } from "../../services/apiCalls";
+import './AppointmentPatient.css'
 
-
-
+ 
 export const AppointmentPatient = () => {
 
 
@@ -38,8 +38,8 @@ export const AppointmentPatient = () => {
         <>
           {appointment.appointment.data.data[0].Appointments.map((data) => (
             <div className="appointment" key={data.id}>
-              <p>Fecha y hora: {data.date_time}</p>
-              <div>{data?.Patient?.name}</div>
+              <p className="datos">Fecha y hora: <br/> {data.date_time}</p>
+              <div> {data?.Patient?.userName}</div>
               
              
             </div>
