@@ -77,30 +77,54 @@ El administrador es el último usuario que puede acceder a todos los datos perso
 <a href="https://www.npmjs.com/">
     <img src= "https://user-images.githubusercontent.com/121863208/227808650-2ae0204a-1c59-4789-bfa9-3f16b24b737d.svg"/>
 </a>
+
+
+
+
 ## Implementación local
+
+
+
+
 
  #Clone the project on your computer
     ` $ git clone 'url-repository' `
+
+
  #Install all dependencies
     ` $ npm install `
  #Create a .env with the credentials on the .env.example
+
+
   #Start server with:
    ``` $ npm run dev ```
+
+
  #Connect with the database following:
+ {
     ``` $ npx sequelize-cli db:create ```
     ``` $ npx sequelize-cli db:migrate ```
     ``` $ npx sequelize-cli db:seed:all ```
+
+}
+
 #Now is time for frontend project:
+
+
  Clone the project on your computer
-    ` $ git clone 'url-repository' `
+   { ` $ git clone 'url-repository' `}
  #Install all dependencies
     ` $ npm i `
  ·#Start server with:
    ``` $ npm run dev ```
 Last step download the dataBase:
+
+
 [Data base git hub](https://github.com/corina43/geekshubs-fsd-val-proyecto_4.1)
 
-## Como se ha realizado este proyecto
+## ¿Cómo se ha realizado este proyecto?
+
+
 Primero, se clonó el proyecto desde un repositorio remoto de Git y se instaló localmente en la computadora. Luego, se instalaron todas las dependencias necesarias a través de npm.
 
 Posteriormente, se configuraron los archivos de configuración para permitir la comunicación con el servidor backend, utilizando la biblioteca de JavaScript axios para simplificar la comunicación HTTP.
@@ -110,7 +134,7 @@ A continuación, se trabajó en el diseño de la interfaz de usuario, utilizando
 Una vez que el diseño se completó, se comenzó a trabajar en la integración con el backend, creando funciones que llaman a las API del backend a través de axios. Se realizaron pruebas y ajustes para garantizar que la aplicación funcionara correctamente.
 
 Para la creación del frontend de la aplicación de la clínica dental, se implementaron diferentes vistas según el rol de los usuarios. Los pacientes pueden hacer login y logout, crear citas, ver sus citas y su perfil. También se creó una vista para los doctores, que pueden hacer login y logout, ver sus citas y su perfil. Además, se creó una vista para los administradores, que pueden hacer login y logout, ver todos los usuarios y su perfil. También se creó una vista de entrada a la página donde, si el usuario no está registrado, puede hacerlo y, según su rol que se autentifica mediante token, se le remite a la vista correspondiente. Todo esto se realizó renderizando los endpoints creados en el backend.
-<p aling="center"><img src="../clinica-dental/images/Screenshot_78.png"/></p>
+<p aling="center"><img src="./clinica-dental/images/Screenshot_78.png"/></p>
 <p aling="center"><img src="../clinica-dental/images/Screenshot_79.png"/></p>
 <p aling="center"><img src="../clinica-dental/"/></p>
 
@@ -164,6 +188,3 @@ Agradezco a todos mis compañeros y especialmente a:
 
 
 
-Este es el proyecto backend:
-
-Clona el proyecto en tu computadora:
