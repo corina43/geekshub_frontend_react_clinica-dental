@@ -1,6 +1,10 @@
 # geekshub_frontend_react_clinica-dental
-# Bienvenido a la aplicación Frontend de la clínica dental
-<p align="center"><img src="./dentalclinic/src/assets/readme1.jpg"/></p>
+
+<em> # Bienvenido a la aplicación Frontend de la clínica dental</em>
+
+ <p align="left">
+   <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
+   </p>
 
 <details>
   <summary>Índice</summary>
@@ -9,8 +13,8 @@
     <li><a href="#deploy">Implementación</a></li>
     <li><a href="#stack">Tecnologías</a></li>
     <li><a href="#local-instalation">Instalación local</a></li>
-    <li><a href="#how-do-we-do-it">¿Cómo lo hacemos?</a></li>
-    <li><a href="#known-bugs">Errores conocidos</a></li>
+    <li><a href="#Cómo se ha realizado este proyecto">¿Cómo lo hacemos?</a></li>
+    <li><a href="#bugs conocidos">Errores conocidos</a></li>
     <li><a href="#future-functionalities">Funcionalidades futuras</a></li>
     <li><a href="#licence">Licencia</a></li>
     <li><a href="#webgraphy">Referencias</a></li>
@@ -93,6 +97,8 @@ El administrador es el último usuario que puede acceder a todos los datos perso
 
  #Install all dependencies
     ` $ npm install `
+ 
+ 
  #Create a .env with the credentials on the .env.example
 
 
@@ -112,15 +118,22 @@ El administrador es el último usuario que puede acceder a todos los datos perso
 
 
  Clone the project on your computer
-   { ` $ git clone 'url-repository' `}
+   ``` $ git clone 'url-repository'`` 
+
+
  #Install all dependencies
-    ` $ npm i `
- ·#Start server with:
+    ``` $ npm i ```
+ 
+ #Start server with:
    ``` $ npm run dev ```
+
+
 Last step download the dataBase:
 
 
 [Data base git hub](https://github.com/corina43/geekshubs-fsd-val-proyecto_4.1)
+
+
 
 ## ¿Cómo se ha realizado este proyecto?
 
@@ -137,7 +150,11 @@ Para la creación del frontend de la aplicación de la clínica dental, se imple
 <p aling="center"><img src="./clinica-dental/images/Screenshot_78.png"/></p>
 <p aling="center"><img src="../clinica-dental/images/Screenshot_79.png"/></p>
 <p aling="center"><img src="../clinica-dental/"/></p>
+---
 
+!['imagen-db'](/images/Screenshot_78.png)
+
+---
 ## Bugs conocidos
 ✅ Desajustes del footer en vista paciente al crear cita y profile. 
 ⬜ No aparece el nombre del usuario logeado en el NavBar.
