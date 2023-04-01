@@ -77,3 +77,34 @@ El administrador es el último usuario que puede acceder a todos los datos perso
 <a href="https://www.npmjs.com/">
     <img src= "https://user-images.githubusercontent.com/121863208/227808650-2ae0204a-1c59-4789-bfa9-3f16b24b737d.svg"/>
 </a>
+## Implementación local
+
+ #Clone the project on your computer
+    ` $ git clone 'url-repository' `
+ #Install all dependencies
+    ` $ npm install `
+ #Create a .env with the credentials on the .env.example
+  #Start server with:
+   ``` $ npm run dev ```
+ #Connect with the database following:
+    ``` $ npx sequelize-cli db:create ```
+    ``` $ npx sequelize-cli db:migrate ```
+    ``` $ npx sequelize-cli db:seed:all ```
+#Now is time for frontend project:
+ Clone the project on your computer
+    ` $ git clone 'url-repository' `
+ #Install all dependencies
+    ` $ npm i `
+ ·#Start server with:
+   ``` $ npm run dev ```
+
+
+
+
+
+
+
+
+Este es el proyecto backend:
+
+Clona el proyecto en tu computadora:
