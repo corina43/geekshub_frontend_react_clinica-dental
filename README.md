@@ -152,7 +152,7 @@ Para la creación del frontend de la aplicación de la clínica dental, se imple
 <p aling="center"><img src="../clinica-dental/"/></p>
 ---
 
-!['imagen-db'](/images/Screenshot_78.png)
+!['imagen-db'](./clinica-dental/dist/assets/Screenshot_78.png)
 
 ---
 ## Bugs conocidos
