@@ -23,17 +23,17 @@
 <details>
   <summary>Índice</summary>
   <ol>
-    <li><a href="#Sobre este proyecto">Sobre este proyecto</a></li>
+    <li><a href="#Sobre-este-proyecto">Sobre este proyecto</a></li>
     <li><a href="#Implementación-local ">Implementación Local</a></li>
     <li><a href="#Tecnologías">Tecnologías</a></li>
     <li><a href="#Instalación local">Instalación local</a></li>
     <li><a href="#Cómo-se-ha-realizado-este-proyecto">¿Cómo se ha realizado este proyecto?</a></li>
     <li><a href="#Bugs-conocidos">Bugs conocidos</a></li>
-    <li><a href="#funcionalidades-futuras">Funcionalidades futuras</a></li>
-    <li><a href="#licencia">Licencia</a></li>
-    <li><a href="#webgraphy">Referencias</a></li>
-    <li><a href="#agradecimientos">Agradecimientos</a></li>
-    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#Futuras-funcionalidades">Futuras funcionalidades </a></li>
+    <li><a href="#Licencia">Licencia</a></li>
+    <li><a href="#Webgrafia">Webgrafia</a></li>
+    <li><a href="#Agradecimientos">Agradecimientos</a></li>
+    <li><a href="#Contacto">Contacto</a></li>
   </ol>
 </details>
 
@@ -230,7 +230,7 @@ Datos de acceso como doctor:
 
 # Vista mobile
 
-<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_99.png"/></p><p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_100.png"/></p><p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_101.png"/></p>
+<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_99.png"/><img src="./clinica-dental/src/common/images/Screenshot_100.png"/><img src="./clinica-dental/src/common/images/Screenshot_101.png"/></p>
 
 ## Bugs conocidos
 
@@ -240,7 +240,7 @@ Datos de acceso como doctor:
 ⬜ No aparece el nombre del usuario logeado en el NavBar.
 
 
-⬜ Algunos desajustes de authentificacion provenientes del backend para darle funccionalidad a Crer Pacientes.  
+⬜ Algunos desajustes de authentificacion provenientes del backend para darle funccionalidad a Crear Pacientes.  
 
 ## Funccionalidades futuras
 
