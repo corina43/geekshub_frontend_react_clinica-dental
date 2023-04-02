@@ -36,7 +36,7 @@ export const Patient = () => {
         
             <div>
                 <h6 className='profile'>My profile:</h6>
-               
+                {/* <figure>{data.user_name?.userName.charAt(0).toUpperCase()}</figure> */}
                 {patients.length > 0 ? (
                     <div className="cardsContainer">
                         {patients.map((data) => {

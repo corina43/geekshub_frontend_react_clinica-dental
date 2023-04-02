@@ -19,10 +19,7 @@ const navigate = useNavigate()
   return (
     <>
     <Navbar expand="lg" className='navBar'>
-        <div className="logo">
-    <img src={logo_img} alt="om dental clinic logo" />
-    </div>
-    <Navbar.Brand as={Link} to={'/home'} className='titleNavBar'>Noa Miralles Dental Care</Navbar.Brand>
+    <Navbar.Brand as={Link} to={'/home'} className='titleNavBar'> <span><img className='img'  src={logo_img} alt="dental clinic logo" /></span>Noa Miralles Dental Care</Navbar.Brand>
         <div className='navbar'>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
