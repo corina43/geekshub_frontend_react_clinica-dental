@@ -113,17 +113,17 @@ El administrador es el último usuario que puede acceder a todos los datos perso
 
 
 
-#Now is time for frontend project:
+# Now is time for frontend project:
 
 
- Clone the project on your computer
-    ``` $ git clone 'url-repository'`` 
+ # Clone the project on your computer
+    ``` $ git clone 'url-repository ``` 
 
 
- #Install all dependencies
+ # Install all dependencies
     ``` $ npm i ```
  
- #Start server with:
+ # Start server with:
    ``` $ npm run dev ```
 
 
@@ -155,9 +155,12 @@ Para la creación del frontend de la aplicación de la clínica dental, se imple
 
 <p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_92.png"/></p>
 
-# Vista paciente
 
 <p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_80.png"/></p>
+
+# Vista paciente
+
+
 
 
 <p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_81.png"/></p>
@@ -165,6 +168,7 @@ Para la creación del frontend de la aplicación de la clínica dental, se imple
 
 <p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_82.png"/></p>
 
+# Realizacion cita paciente
 
 <p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_83.png"/></p>
 ---
@@ -175,14 +179,25 @@ Para la creación del frontend de la aplicación de la clínica dental, se imple
 
 <p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_85.png"/></p>
 
+# Vista admin
 
+<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_95.png"/></p>
+
+
+<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_93.png"/></p>
+
+<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_94.png"/></p>
 
 ## Bugs conocidos
+
+
 ✅ Desajustes del footer en vista paciente al crear cita y profile. 
 ⬜ No aparece el nombre del usuario logeado en el NavBar.
 ⬜ Algunos desajustes de authentificacion provenientes del backend para darle funccionalidad a Crer Pacientes.  
 
 ## Funccionalidades futuras
+
+
 ✅ Crear pacientes.
 ⬜ Crear doctores.
 ⬜ Crear la funcionalidad para eliminar un usuario por parte del administrador.
@@ -190,9 +205,12 @@ Para la creación del frontend de la aplicación de la clínica dental, se imple
 ⬜ Modificar tanto una cita como el perfil por parte del usuario y administrador.
 
 ## Licencia
+
+
 This project is belonging to license Creative Commons Legal Code.
 
 ## Webgrafia:
+
 
 To achieve the goal we have collected information from:
   [React documentation](https://www.reactjs.com/)
