@@ -113,17 +113,17 @@ El administrador es el último usuario que puede acceder a todos los datos perso
 
 
 
-# Now is time for frontend project:
+#Now is time for frontend project:
 
 
- # Clone the project on your computer
+ #Clone the project on your computer
     ``` $ git clone 'url-repository ``` 
 
 
- # Install all dependencies
+ #Install all dependencies
     ``` $ npm i ```
  
- # Start server with:
+ #Start server with:
    ``` $ npm run dev ```
 
 
