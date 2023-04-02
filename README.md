@@ -9,11 +9,11 @@
 <details>
   <summary>Índice</summary>
   <ol>
-    <li><a href="#about-this-project">Sobre este proyecto</a></li>
+    <li><a href="#Sobre este proyecto">Sobre este proyecto</a></li>
     <li><a href="#Implementación ">Implementación</a></li>
     <li><a href="#Tecnologías">Tecnologías</a></li>
     <li><a href="#Instalación local">Instalación local</a></li>
-    <li><a href="#Cómo se ha realizado este proyecto">¿Cómo lo hacemos?</a></li>
+    <li><a href="#Cómo se ha realizado este proyecto">¿Cómo se ha realizado este proyecto?</a></li>
     <li><a href="#bugs conocidos">Errores conocidos</a></li>
     <li><a href="#future-functionalities">Funcionalidades futuras</a></li>
     <li><a href="#licence">Licencia</a></li>
@@ -146,7 +146,7 @@ A continuación, se trabajó en el diseño de la interfaz de usuario, utilizando
 Una vez que el diseño se completó, se comenzó a trabajar en la integración con el backend, creando funciones que llaman a las API del backend a través de axios. Se realizaron pruebas y ajustes para garantizar que la aplicación funcionara correctamente.
 
 Para la creación del frontend de la aplicación de la clínica dental, se implementaron diferentes vistas según el rol de los usuarios. Los pacientes pueden hacer login y logout, crear citas, ver sus citas y su perfil. También se creó una vista para los doctores, que pueden hacer login y logout, ver sus citas y su perfil. Además, se creó una vista para los administradores, que pueden hacer login y logout, ver todos los usuarios y su perfil. También se creó una vista de entrada a la página donde, si el usuario no está registrado, puede hacerlo y, según su rol que se autentifica mediante token, se le remite a la vista correspondiente. Todo esto se realizó renderizando los endpoints creados en el backend.
-<p aling="center"><img src="./clinica-dental/"/></p>
+<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_79.png"/></p>
 <p aling="center"><img src="../clinica-dental/images/Screenshot_79.png"/></p>
 <p aling="center"><img src="../clinica-dental/"/></p>
 ---
