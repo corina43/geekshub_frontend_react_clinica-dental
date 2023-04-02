@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 80px 50px;
-    background-color: #f2f2f2;
+    background-color: #eff6f8;
   }
   
   .footer_container h2 {
@@ -11,6 +11,8 @@
     font-weight: 700;
     color: #333;
     margin-bottom: 20px;
+    text-shadow: -1px -1px 1.2px rgba(20, 64, 195, 0.5),
+    1px 1px 1px rgba(1, 1, 1, 0.07);
   }
   
   .footer_container p {

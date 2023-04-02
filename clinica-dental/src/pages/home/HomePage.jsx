@@ -1,7 +1,7 @@
 import React from 'react';
 
 import "font-awesome/css/font-awesome.min.css";
-import slider_one from "../assets/slider_one.png";
+import slider_three from "../assets/slider_three.jpg";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import './Home.css'
@@ -19,8 +19,8 @@ import './Home.css'
   <div className="slider-images">
   <div className="slider_image">
   <img
-                     className="w-100"
-                     src={slider_one}
+                     className="w-250"
+                     src={slider_three}
                      alt="First slide"
                      data-aos="fade-down"
                    />
@@ -32,8 +32,8 @@ import './Home.css'
                       fontSize: "51px",
                       margin: "0",
                       textAlign: "left",
-                      lineHeight: "1.2",
-                      color: "hsl(218, 70%, 18%)",
+                      lineHeight: "1.5",
+                      color: "#19407b",
                     }}
                   >
                     Cuidamos tu sonrisa
@@ -68,7 +68,7 @@ import './Home.css'
                 <p>
                   Nuestros precios razonables han hecho que miles de personas sonrían con una nueva, hermosa e irresistible sonrisa, como nunca antes.
                 </p>
-                <Link to={"/contact-us"}>
+                <Link to={"/register"}>
                   <Button variant="primary">Leer más</Button>
                 </Link>
               </div>
@@ -78,7 +78,7 @@ import './Home.css'
                   Lunes a viernes: 10.00 a.m. - 10.00 p.m. 
                 </p>
 
-                <Link to={"/dental-clinic/slot"}>
+                <Link to={"/UserAppointment"}>
                   <Button variant="primary">Reservar cita</Button>
                 </Link>
               </div>
