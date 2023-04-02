@@ -2,6 +2,20 @@
 
 <em> # Bienvenido a la aplicación Frontend de la clínica dental</em>
 
+
+
+![image](https://user-images.githubusercontent.com/113507322/205169800-ae8aeff3-2afc-467c-8c53-6c1637671770.png)
+
+
+### Datos generales
+
+**- Autores del proyecto:** Corina Maria Ciorpac.
+
+**- Título del proyecto:** Ejercicio técnico 5 - Frontend App clinica dental
+
+**- Fecha:** 12/3/2023
+
+
  <p align="left">
    <img src="https://img.shields.io/badge/STATUS-EN%20DESAROLLO-green">
    </p>
@@ -127,7 +141,7 @@ El administrador es el último usuario que puede acceder a todos los datos perso
    ``` $ npm run dev ```
 
 
-Last step download the dataBase:
+#Last step download the dataBase:
 
 
 [Data base git hub](https://github.com/corina43/geekshubs-fsd-val-proyecto_4.1)
@@ -137,7 +151,7 @@ Last step download the dataBase:
 ## ¿Cómo se ha realizado este proyecto?
 
 
-Primero, se clonó el proyecto desde un repositorio remoto de Git y se instaló localmente en la computadora. Luego, se instalaron todas las dependencias necesarias a través de npm.
+Primero, se clonó el proyecto desde un repositorio remoto de Git y se instaló localmente. Luego, se instalaron todas las dependencias necesarias a través de npm.
 
 Posteriormente, se configuraron los archivos de configuración para permitir la comunicación con el servidor backend, utilizando la biblioteca de JavaScript axios para simplificar la comunicación HTTP.
 
@@ -146,6 +160,24 @@ A continuación, se trabajó en el diseño de la interfaz de usuario, utilizando
 Una vez que el diseño se completó, se comenzó a trabajar en la integración con el backend, creando funciones que llaman a las API del backend a través de axios. Se realizaron pruebas y ajustes para garantizar que la aplicación funcionara correctamente.
 
 Para la creación del frontend de la aplicación de la clínica dental, se implementaron diferentes vistas según el rol de los usuarios. Los pacientes pueden hacer login y logout, crear citas, ver sus citas y su perfil. También se creó una vista para los doctores, que pueden hacer login y logout, ver sus citas y su perfil. Además, se creó una vista para los administradores, que pueden hacer login y logout, ver todos los usuarios y su perfil. También se creó una vista de entrada a la página donde, si el usuario no está registrado, puede hacerlo y, según su rol que se autentifica mediante token, se le remite a la vista correspondiente. Todo esto se realizó renderizando los endpoints creados en el backend.
+
+
+### Acceso a la aplicación
+
+
+
+Datos de acceso como administrador: 
+
+> Mail: corina@gmail.com // Password: 123456
+
+Datos de acceso como paciente: 
+
+> Mail: painecore@gmail.com // Password: 123456
+
+Datos de acceso como doctor: 
+
+> Mail: freyrii@gmail.com // Password: 123456
+
 
 # Vista entrada Api
 
@@ -191,16 +223,25 @@ Para la creación del frontend de la aplicación de la clínica dental, se imple
 ## Bugs conocidos
 
 
-✅ Desajustes del footer en vista paciente al crear cita y profile. 
+✅ Desajustes del footer en vista paciente al crear cita y profile.
+
 ⬜ No aparece el nombre del usuario logeado en el NavBar.
+
+
 ⬜ Algunos desajustes de authentificacion provenientes del backend para darle funccionalidad a Crer Pacientes.  
 
 ## Funccionalidades futuras
 
 
 ✅ Crear pacientes.
+
+
 ⬜ Crear doctores.
+
+
 ⬜ Crear la funcionalidad para eliminar un usuario por parte del administrador.
+
+
 ⬜ Ser capaz de eliminar y actualizar citas tanto por parte del usuario como del administrador.
 ⬜ Modificar tanto una cita como el perfil por parte del usuario y administrador.
 
