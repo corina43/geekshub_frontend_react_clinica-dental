@@ -10,9 +10,9 @@
   <summary>Índice</summary>
   <ol>
     <li><a href="#about-this-project">Sobre este proyecto</a></li>
-    <li><a href="#deploy">Implementación</a></li>
-    <li><a href="#stack">Tecnologías</a></li>
-    <li><a href="#local-instalation">Instalación local</a></li>
+    <li><a href="#Implementación ">Implementación</a></li>
+    <li><a href="#Tecnologías">Tecnologías</a></li>
+    <li><a href="#Instalación local">Instalación local</a></li>
     <li><a href="#Cómo se ha realizado este proyecto">¿Cómo lo hacemos?</a></li>
     <li><a href="#bugs conocidos">Errores conocidos</a></li>
     <li><a href="#future-functionalities">Funcionalidades futuras</a></li>
@@ -103,22 +103,21 @@ El administrador es el último usuario que puede acceder a todos los datos perso
 
 
   #Start server with:
-   ``` $ npm run dev ```
+    ``` $ npm run dev ```
 
 
  #Connect with the database following:
- {
     ``` $ npx sequelize-cli db:create ```
     ``` $ npx sequelize-cli db:migrate ```
     ``` $ npx sequelize-cli db:seed:all ```
 
-}
+
 
 #Now is time for frontend project:
 
 
  Clone the project on your computer
-   ``` $ git clone 'url-repository'`` 
+    ``` $ git clone 'url-repository'`` 
 
 
  #Install all dependencies
@@ -152,7 +151,7 @@ Para la creación del frontend de la aplicación de la clínica dental, se imple
 <p aling="center"><img src="../clinica-dental/"/></p>
 ---
 
-!['imagen-db'](../clinica-dental/dist/assets/Screenshot_78.png)
+!['imagen-db'](./clinica-dental/src/common/images/Screenshot_79.png)
 
 ---
 ## Bugs conocidos
