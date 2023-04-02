@@ -27,13 +27,13 @@
     <li><a href="#Implementación-local ">Implementación Local</a></li>
     <li><a href="#Tecnologías">Tecnologías</a></li>
     <li><a href="#Instalación local">Instalación local</a></li>
-    <li><a href="#Cómo se ha realizado este proyecto">¿Cómo se ha realizado este proyecto?</a></li>
-    <li><a href="#Bugs conocidos">Bugs conocidos</a></li>
-    <li><a href="#future-functionalities">Funcionalidades futuras</a></li>
-    <li><a href="#licence">Licencia</a></li>
+    <li><a href="#Cómo-se-ha-realizado-este-proyecto">¿Cómo se ha realizado este proyecto?</a></li>
+    <li><a href="#Bugs-conocidos">Bugs conocidos</a></li>
+    <li><a href="#funcionalidades-futuras">Funcionalidades futuras</a></li>
+    <li><a href="#licencia">Licencia</a></li>
     <li><a href="#webgraphy">Referencias</a></li>
-    <li><a href="#gratitudes">Agradecimientos</a></li>
-    <li><a href="#contact">Contacto</a></li>
+    <li><a href="#agradecimientos">Agradecimientos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
   </ol>
 </details>
 
@@ -185,8 +185,10 @@ Datos de acceso como doctor:
 
 
 
-<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_92.png"/></p>
+<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_96.png"/></p>
 
+
+<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_92.png"/></p>
 
 <p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_80.png"/></p>
 
@@ -220,6 +222,16 @@ Datos de acceso como doctor:
 
 <p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_94.png"/></p>
 
+# Vista doctores
+
+<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_97.png"/></p>
+
+<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_98.png"/></p>
+
+# Vista mobile
+
+<p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_99.png"/></p><p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_100.png"/></p><p aling="center"><img src="./clinica-dental/src/common/images/Screenshot_101.png"/></p>
+
 ## Bugs conocidos
 
 
@@ -243,6 +255,8 @@ Datos de acceso como doctor:
 
 
 ⬜ Ser capaz de eliminar y actualizar citas tanto por parte del usuario como del administrador.
+
+
 ⬜ Modificar tanto una cita como el perfil por parte del usuario y administrador.
 
 ## Licencia
@@ -255,6 +269,7 @@ This project is belonging to license Creative Commons Legal Code.
 
 To achieve the goal we have collected information from:
   [React documentation](https://www.reactjs.com/)
+
   [React-bootstrap GeeksHubs](https://react-bootstrap.github.io/)
 
 
