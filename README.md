@@ -9,7 +9,7 @@
 
 ### Datos generales
 
-**- Autores del proyecto:** Corina Maria Ciorpac.
+**- Autor del proyecto:** Corina Maria Ciorpac.
 
 **- Título del proyecto:** Ejercicio técnico 5 - Frontend App clinica dental
 
